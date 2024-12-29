@@ -1,0 +1,14 @@
+#page{ 
+    width: 1555px; 
+    height: 740px; 
+    overflow: hidden;
+}
+#page > #itemsPage{ 
+    width: 200%; 
+    height: 100%; 
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    transition: 0.7s;
+    left: 0%;
+}

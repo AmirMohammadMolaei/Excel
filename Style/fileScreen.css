@@ -1,0 +1,371 @@
+#FileScreen{
+    width: 100%;
+    height: 740px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: 0.5s;
+    z-index: 100;
+    background-color: #f0f0f0;
+}
+#FileTabMenu.menu{
+    width: 8%;
+    height: 100%;
+    display: block;
+}
+#FileTabMenu.menu > li{width: 100%;}
+#FileTabMenu.menu:not(:nth-child(1)) > li:nth-child(1) > label{margin-top: 40px;}
+#FileTabMenu.menu > li > label{width: 100%; display: block; padding: 10px 18px;}
+#FileTabMenu.menu > hr{ margin-left: 10px; margin-right: 10px; color: #fff; }
+/* Tab Info */
+#FileTabMenu.menu > li > .subMenu{
+    width: 92%;
+    height: 100%;
+    left: 122.8px;
+    top: 0;
+    background-color: #f0f0f0;
+    color: #000;
+    font-weight: 100;
+    display: flex;
+    justify-content: start;
+    flex-flow: row wrap;
+    display: none;
+}
+#FileTabMenu.menu > li > input:checked ~ .subMenu{display: block;}
+#FileScreen > .menu > li > .subMenu > .FileTabTitr{ 
+    font-weight: 100; 
+    width: 100%; 
+    font-size: 45px;
+    text-indent: 40px;
+    color: #555;
+    height: 50px;
+    margin-bottom: 0;
+}
+#Items.TabItems{
+    width: 100%;
+    height: 95%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-left: 40px;
+    
+}
+#Items.TabItems > li{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+}
+#Items.TabItems > li > .picture{border: 1px solid #ccc; height: 80px; width: 80px;}
+#Items.TabItems > li > .picture > img{width: 100%; height: 100%;}
+#Items.TabItems > li > .Tozihat{height: 80px;}
+#Items.TabItems > li > .Tozihat > h2,
+#Items.TabItems > li > .Tozihat > h4{
+    margin-top: 0;
+    font-weight: 100;
+    font-size: 14px;
+}
+#Items.TabItems > li > .Tozihat > h4{
+    margin: 0;
+    text-indent: 22px;
+    background-image: url(../Image\ Of\ Excel/FileMenu/Liststayle.png);
+    background-position: 2% 50%;
+    background-repeat: no-repeat;
+    background-size: 8px;
+}
+/* Tab New */
+#FileScreen > .menu > li > .subMenu > .mainHeader{margin-left: 20px;}
+#FileScreen > .menu > li > .subMenu > .mainHeader > input{width: 40%; margin-bottom: 10px;}
+#FileScreen > .menu > li > .subMenu > .OpenBlankSheet{margin-left: 40px;}
+/* Tab Open */
+#FileScreen > .menu > li > .subMenu > .menu{
+    margin-left: 40px; 
+    color: #000;
+    font-size: 16px;
+    background-color: transparent;
+    width: 17.3%;
+}
+#FileScreen > .menu > li > .subMenu > .menu > li{background-repeat: no-repeat; background-position: 2% 50%; background-size: 27px;}
+#FileScreen > .menu > li > .subMenu > .menu > .Recent,
+#FileScreen > .menu > li > .subMenu > .menu > .AddPlace{border-bottom: 1px solid #ccc;}
+#FileScreen > .menu > li > .subMenu > .menu > .Recent{background-image: url(../Image\ Of\ Excel/FileMenu/Recent.png);}
+#FileScreen > .menu > li > .subMenu > .menu > .OneDrive{background-image: url(../Image\ Of\ Excel/FileMenu/OneDrive.png);}
+#FileScreen > .menu > li > .subMenu > .menu > .ThisPc{background-image: url(../Image\ Of\ Excel/FileMenu/ThisPC.png);}
+#FileScreen > .menu > li > .subMenu > .menu > .AddPlace{background-image: url(../Image\ Of\ Excel/FileMenu/Add.png);}
+#FileScreen > .menu > li > .subMenu > .menu > .Browse{background-image: url(../Image\ Of\ Excel/FileMenu/Folder.png);}
+#FileScreen > .menu > li > .subMenu > .menu > li > input:checked + label{color: #000; background-color: #00a94c6e;}
+#FileScreen > .menu > li > .subMenu > .menu > li > label:hover{background-color: #30714d6e;}
+#FileScreen > .menu > li > .subMenu > .menu > li > label{padding: 5px 0; height: 40px; line-height: 40px; text-indent: 40px;}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu{ 
+    left: 283px; 
+    width: 80%; 
+    border-left: 1px solid #ccc;
+    height: 90%;
+    top: 120px;
+}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > h6{ margin-left: 15px; margin-top: 0; font-weight: 100;}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > h6:nth-child(1){margin-bottom: 575px;}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > h6:nth-child(2){
+    border: 1px solid #ccc;
+    width: 150px;
+    text-indent: 20px;
+    background-position: 2% 50%;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    cursor: pointer;
+}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > h6:nth-child(2){background-image: url(../Image\ Of\ Excel/FileMenu/Folder.png);}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > .TitrItems{
+    width: 130px;
+    height: 50px;
+    margin-left: 20px;
+    font-size: 18px;
+    color: #30714D;
+}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > .TitrOneDrive{
+    text-indent: 50px;
+    background-image: url(../Image\ Of\ Excel/FileMenu/OneDrive.png);
+    background-position: 2% 50%;
+    background-repeat: no-repeat;
+    background-size: 40px;
+}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > h5{font-weight: 100; width: 60%; margin: 0 0 10px 20px;}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > .pictureOneDrive{margin: 0 0 50px 20px; width: 300px; height: 150px;}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > .pictureOneDrive > img{width: 100%; height: 100%;}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > a{
+    display: block;
+    color: blue;
+    text-decoration: none;
+    margin-left: 20px;
+    width: 80px;
+    font-size: 12px;
+}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > a:hover{text-decoration: underline;}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > .SingIn{
+    margin: 20px 0 0 20px;
+    width: 80px; 
+    height: 80px; 
+    border: 1px solid #ccc;
+}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > .SingIn > img{width: 100%; height: 100%;}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > .FolderForPC{
+    width: 20%;
+    height: 40px;
+    text-indent: 50px;
+    background-image: url(../Image\ Of\ Excel/FileMenu/Folder02.png);
+    background-position: 2% 50%;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 40px;
+    margin-left: 20px;
+    transition: 0.5s;
+    border-bottom: 1px solid transparent;
+}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > .FolderForPC:hover{border-bottom: 1px solid #30714D; width: 50%;}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > .KarbordOneDrive{
+    width: 20%;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 20px; 
+    text-indent: 50px;
+    background-image: url(../Image\ Of\ Excel/FileMenu/OneDrive.png);
+    background-position: 2% 50%;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    transition: 0.5s;
+    border-bottom: 1px solid transparent;
+}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > .KarbordOneDrive:hover{border-bottom: 1px solid #30714D; width: 50%;}
+/* Print */
+#Print{
+    width: 18%; 
+    height: 84%; 
+    border-right: 1px solid #ccc; 
+    display: flex;
+    justify-content: start;
+    flex-flow: row wrap;
+    align-items: start;
+    margin-left: 40px;
+}
+#PrintFile{width: 80px; height: 80px; border: 1px solid #ccc; margin-right: 15px;}
+#PrintFile > img{width: 100%; height: 100%;}
+#Print > .Cover{display: flex; flex-flow: row wrap; width: 90%;}
+#Print > .Cover > input{
+    width: 70px; 
+    height: 20px; 
+    padding: 0;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-left: 10px;
+    color: #555;
+    text-indent: 10px;
+}
+#Print > .Cover > h2{
+    font-weight: 100;
+    color: #30714D;
+    width: 100%;
+    font-size: 30px;
+    margin-top: 0;
+}
+#PrinterType:hover{background-color: #30714d6e; cursor: pointer;}
+#PrinterType{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    line-height: 40px;
+    text-indent: 40px;
+    font-size: 16px;
+    background-image: url(../Image\ Of\ Excel/FileMenu/PrinterType.png);
+    background-position: 2% 50%;
+    background-repeat: no-repeat;
+    background-size: 28px;
+    position: relative;
+}
+#PrinterType > img{ width: 8px; height: 8px; margin-left: 20px; }
+#PrinterTypeAcardeon{ 
+    height: 0;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+}
+#PrinterTypeAcardeon > li{height: 40px; font-size: 12px; text-indent: 40px;} 
+#PrinterTypeAcardeon > li:nth-child(6),
+#PrinterTypeAcardeon > li:nth-child(7){height: 20px; line-height: 20px;}
+#Print > .Cover > a:hover{text-decoration: underline;}
+#Print > .Cover > a{
+    text-decoration: none;
+    text-align: right;
+    cursor: pointer;
+    margin-left: 140px;
+}
+#Print > .Cover:nth-child(3) > a{margin-left: 170px;}
+#Print > .Cover > .PrinterSetting{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+#Print > .Cover > .PrinterSetting > li:hover{background-color: #30714d6e; cursor: pointer;}
+#Print > .Cover > .PrinterSetting > li{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    line-height: 40px;
+    text-indent: 40px;
+    background-position: 2% 50%;
+    background-repeat: no-repeat;
+    background-size: 25px;
+}
+#PrinterSetting1{position: relative;}
+#PrinterSettingAcardeon1{ height: 0; top: 40px; width: 100%; z-index: 20;}
+#PrinterSettingAcardeon1 > li{height: 40px; text-indent: 40px;}
+#PrinterSettingAcardeon1 > li:nth-child(5){height: 20px; line-height: 20px;}
+#PrinterSetting2{position: relative;}
+#PrinterSettingAcardeon2{ height: 0; top: 40px; width: 100%; z-index: 20;}
+#PrinterSettingAcardeon2 > li{height: 40px; text-indent: 40px;}
+#PrinterSetting3{position: relative;}
+#PrinterSettingAcardeon3{ height: 0; top: 40px; width: 100%; z-index: 20;}
+#PrinterSettingAcardeon3 > li{height: 40px; text-indent: 40px;}
+#PrinterSetting4{position: relative;}
+#PrinterSettingAcardeon4{ height: 0; top: -130px; width: 100%; z-index: 20;}
+#PrinterSettingAcardeon4 > li{height: 40px; text-indent: 40px;}
+#PrinterSetting5{position: relative;}
+#PrinterSettingAcardeon5{ height: 0; top: -200px; width: 100%; z-index: 20;}
+#PrinterSettingAcardeon5 > li{height: 40px; text-indent: 40px;}
+#PrinterSettingAcardeon5 > li:nth-child(6){height: 20px; line-height: 20px;}
+#PrinterSetting6{position: relative;}
+#PrinterSettingAcardeon6{ height: 0; top: -200px; width: 100%; z-index: 20;}
+#PrinterSettingAcardeon6 > li{height: 40px; text-indent: 40px;}
+#PrinterSettingAcardeon6 > li:nth-child(6){height: 20px; line-height: 20px;}
+#Print > .Cover > .PrinterSetting > li:nth-child(2):hover{background-color: transparent; cursor: default;}
+#Print > .Cover > .PrinterSetting > li:nth-child(2){height: 20px; line-height: 20px; border: none;}
+#Print > .Cover > .PrinterSetting > li > img{ width: 8px; height: 8px;}
+#Print > .Cover > .PrinterSetting > li:nth-child(1){background-image: url(../Image\ Of\ Excel/FileMenu/PrintActiveSheet.png);}
+#Print > .Cover > .PrinterSetting > li:nth-child(1) > img{margin-left: 80px;}
+#Print > .Cover > .PrinterSetting > li:nth-child(3){background-image: url(../Image\ Of\ Excel/FileMenu/Collated.png); background-size: 32px;}
+#Print > .Cover > .PrinterSetting > li:nth-child(3) > img{margin-left: 132px;}
+#Print > .Cover > .PrinterSetting > li:nth-child(4){background-image: url(../Image\ Of\ Excel/FileMenu/Portraite.png); background-size: 20px;}
+#Print > .Cover > .PrinterSetting > li:nth-child(4) > img{margin-left: 79px;}
+#Print > .Cover > .PrinterSetting > li:nth-child(5){background-image: url(../Image\ Of\ Excel/FileMenu/A4.png); background-size: 20px;}
+#Print > .Cover > .PrinterSetting > li:nth-child(5) > img{margin-left: 159px;}
+#Print > .Cover > .PrinterSetting > li:nth-child(6){background-image: url(../Image\ Of\ Excel/FileMenu/Margin.png); background-size: 20px;}
+#Print > .Cover > .PrinterSetting > li:nth-child(6) > img{margin-left: 92px;}
+#Print > .Cover > .PrinterSetting > li:nth-child(7){background-image: url(../Image\ Of\ Excel/FileMenu/Scaling.png);}
+#Print > .Cover > .PrinterSetting > li:nth-child(7) > img{margin-left: 119px;}
+#Print > .Cover > .PrinterSetting > li > input{
+    width: 60px;
+    height: 20px;
+    padding: 0;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-left: 10px;
+    color: #555;
+    text-indent: 10px;
+}
+/* Share */
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > #ShareTitr.TitrOneDrive{background: none; width: 300px; text-indent: 12px;}
+#FileScreen > .menu > li > .subMenu > h2{
+    color: #30714D;
+    font-weight: 100;
+    font-size: 30px;
+    margin: 0;
+    margin-left: 40px;
+}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > h5{
+    margin: 0;
+    text-indent: 30px;
+    background-image: url(../Image\ Of\ Excel/FileMenu/Liststayle.png);
+    background-position: 2% 50%;
+    background-repeat: no-repeat;
+    background-size: 8px;
+    margin-left: 20px;
+}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > .pictureShare{
+    width: 80px; 
+    height: 80px; 
+    border: 1px solid #ccc; 
+    margin: 12px 0 0 33px;
+}
+#FileScreen > .menu > li > .subMenu > .menu > li > .subMenu > .pictureShare > img{width: 100%; height: 100%;}
+#FileScreen > .menu > li > .subMenu > .menu > #ShareIcon.OneDrive{background-image: url(../Image\ Of\ Excel/FileMenu/Share.png);}
+#FileScreen > .menu > li > .subMenu > .menu > #EmailIcon.ThisPc{background-image: url(../Image\ Of\ Excel/FileMenu/Email.png);}
+/* Export */
+#FileScreen > .menu > li > .subMenu > .menu > #ChangeIcon.OneDrive{background-image: url(../Image\ Of\ Excel/FileMenu/Create.png);}
+#FileScreen > .menu > li > .subMenu > .menu > #CreateIcon.ThisPc{background-image: url(../Image\ Of\ Excel/FileMenu/Change.png);}
+#ChangeIcon > .subMenu > h2{margin: 20px; font-weight: 100; color: red;}
+/* Publish */
+#FileScreen > .menu > li > .subMenu > .menu > #PublishIcon.OneDrive{background-color: #00a94c6e; background-image: url(../Image\ Of\ Excel/FileMenu/Publish.png);}
+#PublishIcon > .subMenu > h4{margin-top: 0; margin-left: 28px; width: 60%; font-weight: 100;}
+#FileScreen > .menu > li > .subMenu > .menu > #PublishIcon > .subMenu > a {margin-left: 28px;}
+/* Account */
+#Account > .Cover{ width: 40%; height: 100%; float: left;}
+#Account > .Cover:nth-child(2){width: 28%;}
+#Account > .Cover > h3{ font-weight: 100; margin-left: 40px; font-size: 20px;}
+#Account > .Cover > h4{width: 90%; margin-left: 40px; font-weight: 100;}
+#ChangeTheme:hover{cursor: pointer; background-color: #00a94c6e;}
+#ChangeTheme{
+    height: 20px;
+    width: 90%;
+    border: 1px solid #ccc;
+    margin-left: 40px;
+    position: relative;
+}
+#ChangeTheme > #ThemeType{height: 0; width: 100%; top: 21px;}
+#ChangeTheme > img{width: 8px; height: 8px; margin-left: 260px;}
+#Account > .Cover > .SingIn{
+    width: 60px; 
+    height: 25px; 
+    border: 1px solid #ccc; 
+    margin-left: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+#Account > .Cover > h2{color: #30714D; font-weight: 100; margin-left: 40px; font-size: 22px;}
+#Account > .Cover > .OfficeIcon{width: 180px; height: 80px; margin-left: 40px;}
+#Account > .Cover > .OfficeIcon > img{width: 100%; height: 100%;}

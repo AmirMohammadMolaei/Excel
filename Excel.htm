@@ -1,0 +1,2169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel 2016</title>
+    <link rel="stylesheet" href="Style/page.css">
+    <link rel="stylesheet" href="Style/openWorkbook.css">
+    <link rel="stylesheet" href="Style/workBook.css">
+    <link rel="stylesheet" href="Style/fileScreen.css">
+    <script src="js/movePage.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/FileTab.js"></script>
+    <script src="js/DarkMood.js"></script>
+    <script src="js/RightClick.js"></script>
+    <script src="js/SelolID.js"></script>
+</head>
+<body>
+            <!-- openWorkbook -->
+            <div id="openWorkbook">    
+                <div class="side">
+                    <h1>Excel</h1>
+                    <h2>Recent</h2>
+                    <p>You haven't opened any workbooks recently.To browse for a workbook, start
+                        by clicking on Open other workbooks.
+                    </p>
+                    <h4>Open Other Workbooks</h4>
+                </div>
+                <div class="main">
+                    <div id="Search" class="mainHeader">
+                        <input type="text" placeholder="Search for online templates">
+                        <div class="SingIn">
+                            <h4>Sing in to get the most out of Office</h4>
+                            <span>Learn more</span>
+                        </div>
+                        <div class="suggestSearch">
+                            Suggested searches:
+                            <a href="#">Business</a><a href="#">Personal</a><a href="#">Planners and Trackers</a>
+                            <a href="#">Lists</a><a href="#">Budgets</a><a href="#">Charts</a>
+                            <a href="#">Calendars</a>
+                        </div>
+                    </div>
+                    <div id="blankWorkbook" class="OpenBlankSheet">
+                        <img src="Image Of Excel/blankWorkbook.png">
+                        <span>Blank workbook</span>
+                    </div>
+                </div>
+            </div>
+            <!-- workBook -->
+            <div id="workBook">
+                <div class="header">
+                    <div id="closeTab"></div>
+                    <ul id="SheetMenu" class="menu">
+                        <li id="ShowFileTab">
+                            <input type="radio" name="itemsMenu" id="item1">
+                            <label for="item1">Flie</label>
+                        </li>
+                        <div id="FileScreen">
+                            <ul id="FileTabMenu" class="menu">
+                                <li>
+                                    <input type="radio" name="FileMenu" id="FM1">
+                                    <label for="FM1">Info</label>
+                                    <div class="subMenu">
+                                        <h1 class="FileTabTitr">Info</h1>
+                                        <ul id="Items" class="TabItems">
+                                            <li>
+                                                <div class="picture"><img src="Image Of Excel/FileMenu/Protect.png"></div>
+                                                <div class="Tozihat">
+                                                    <h2>Protect Workbook</h2>
+                                                    <h4>Control what types of changes people can make to this workbook.</h4>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="picture"><img src="Image Of Excel/FileMenu/Inspect.png"></div>
+                                                <div class="Tozihat">
+                                                    <h2>Inspect Workbook</h2>
+                                                    <h4>Befor publishing this file.</h4>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="picture"><img src="Image Of Excel/FileMenu/Manage.png"></div>
+                                                <div class="Tozihat">
+                                                    <h2>Manage Workbook</h2>
+                                                    <h4>Check in, check out, and recover unsaved changes.</h4>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="picture"><img src="Image Of Excel/FileMenu/Browser.png"></div>
+                                                <div class="Tozihat">
+                                                    <h2>Browser View Options</h2>
+                                                    <h4>Pick what users can see when this workbook is viewed on the Web.</h4>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="radio" name="FileMenu" id="FM2">
+                                    <label for="FM2">New</label>
+                                    <div class="subMenu">
+                                        <h1 class="FileTabTitr">New</h1>
+                                        <div id="Search" class="mainHeader">
+                                            <input type="text" placeholder="Search for online templates">
+                                            <div class="suggestSearch">
+                                                Suggested searches:
+                                                <a href="#">Business</a><a href="#">Personal</a><a href="#">Planners and Trackers</a>
+                                                <a href="#">Lists</a><a href="#">Budgets</a><a href="#">Charts</a>
+                                                <a href="#">Calendars</a>
+                                            </div>
+                                        </div>
+                                        <div class="OpenBlankSheet">
+                                            <img src="Image Of Excel/blankWorkbook.png">
+                                            <span>Blank workbook</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="radio" name="FileMenu" id="FM3">
+                                    <label id="OpenInFileTab" for="FM3">Open</label>
+                                    <div class="subMenu">
+                                        <h1 class="FileTabTitr">Open</h1>
+                                        <ul id="FileTabMenu" class="menu">
+                                            <li class="Recent">
+                                                <input type="radio" name="FileTabUL" id="UL1">
+                                                <label for="UL1">Recent</label>
+                                                <div class="subMenu">
+                                                    <h6>You have not opened any workbooks recently.Pick a place to browse for a workbook</h6>
+                                                    <h6>Remove Unsaved Workbooks</h6>
+                                                </div>
+                                            </li>
+                                            <li class="OneDrive">
+                                                <input type="radio" name="FileTabUL" id="UL2">
+                                                <label for="UL2">OneDrive</label>
+                                                <div class="subMenu">
+                                                    <div class="TitrItems TitrOneDrive">OneDrive</div>
+                                                    <h5>Use OneDrive to access your files from anywhere and share with anyone.</h5>
+                                                    <div class="pictureOneDrive"><img src="Image Of Excel/FileMenu/PictureOneDrive.png"></div>
+                                                    <a href="#">Learn more</a>
+                                                    <a href="#">Sing up</a>
+                                                    <div class="SingIn"><img src="Image Of Excel/FileMenu/SingIn.png"></div>
+                                                </div>
+                                            </li>
+                                            <li class="ThisPc">
+                                                <input type="radio" name="FileTabUL" id="UL3">
+                                                <label for="UL3">This Pc</label>
+                                                <div class="subMenu">
+                                                    <div class="FolderForPC">Documents</div>
+                                                    <div class="FolderForPC">Desktop</div>
+                                                </div>
+                                            </li>
+                                            <li class="AddPlace">
+                                                <input type="radio" name="FileTabUL" id="UL4">
+                                                <label for="UL4">Add a Place</label>
+                                                <div class="subMenu">
+                                                    <div class="TitrItems">Add a Place</div>
+                                                    <h5>You can add locations to make it easier to save Office documents to the could.</h5>
+                                                    <div class="KarbordOneDrive">OneDrive</div>
+                                                    <div class="KarbordOneDrive">OneDrive for Business</div>
+                                                </div>
+                                            </li>
+                                            <li class="Browse">
+                                                <input type="radio" name="FileTabUL" id="UL5">
+                                                <label for="UL5">Browse</label>
+                                                <div class="subMenu"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="radio" name="FileMenu" id="FM5">
+                                    <label for="FM5">Save As</label>
+                                    <div class="subMenu">
+                                        <h1 class="FileTabTitr">Save As</h1>
+                                        <ul id="FileTabMenu" class="menu">
+                                            <li class="OneDrive">
+                                                <input type="radio" name="FileTabUL" id="Save1">
+                                                <label for="Save1">OneDrive</label>
+                                                <div class="subMenu">
+                                                    <div class="TitrItems TitrOneDrive">OneDrive</div>
+                                                    <h5>Use OneDrive to access your files from anywhere and share with anyone.</h5>
+                                                    <div class="pictureOneDrive"><img src="Image Of Excel/FileMenu/PictureOneDrive.png"></div>
+                                                    <a href="#">Learn more</a>
+                                                    <a href="#">Sing up</a>
+                                                    <div class="SingIn"><img src="Image Of Excel/FileMenu/SingIn.png"></div>
+                                                </div>
+                                            </li>
+                                            <li class="ThisPc">
+                                                <input type="radio" name="FileTabUL" id="Save2">
+                                                <label for="Save2">This Pc</label>
+                                                <div class="subMenu">
+                                                    <div class="FolderForPC">Documents</div>
+                                                    <div class="FolderForPC">Desktop</div>
+                                                </div>
+                                            </li>
+                                            <li class="AddPlace">
+                                                <input type="radio" name="FileTabUL" id="Save3">
+                                                <label for="Save3">Add a Place</label>
+                                                <div class="subMenu">
+                                                    <div class="TitrItems">Add a Place</div>
+                                                    <h5>You can add locations to make it easier to save Office documents to the could.</h5>
+                                                    <div class="KarbordOneDrive">OneDrive</div>
+                                                    <div class="KarbordOneDrive">OneDrive for Business</div>
+                                                </div>
+                                            </li>
+                                            <li class="Browse">
+                                                <input type="radio" name="FileTabUL" id="Save4">
+                                                <label for="Save4">Browse</label>
+                                                <div class="subMenu"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="radio" name="FileMenu" id="FM6">
+                                    <label for="FM6">Print</label>
+                                    <div class="subMenu">
+                                        <h1 class="FileTabTitr">Print</h1>
+                                        <div id="Print">
+                                            <div class="Cover">
+                                                <div id="PrintFile"><img src="Image Of Excel/FileMenu/Print.png"></div>
+                                                Copies:    <input type="number" placeholder="1" min="1" max="10">
+                                            </div>
+                                            <div class="Cover">
+                                                <h2>Printer</h2>
+                                                <div id="PrinterType">Microsoft Print to PDF <img src="Image Of Excel/arrowdown.png">
+                                                    <ul id="PrinterTypeAcardeon" class="Acardeon">
+                                                        <li>Fax</li>
+                                                        <li>Microsoft Print to PDF</li>
+                                                        <li>Microsoft XPS Document Writer</li>
+                                                        <li>OneNote For Windows 10</li>
+                                                        <hr>
+                                                        <li>Add Printer...</li>
+                                                        <li>Print to File</li>
+                                                    </ul>
+                                                </div>
+                                                <a href="#">Printer Properties</a>
+                                            </div>
+                                            <div class="Cover">
+                                                <h2>Settings</h2>
+                                                <ul class="PrinterSetting">
+                                                    <li id="PrinterSetting1">Print Active Sheets<img src="Image Of Excel/arrowdown.png">
+                                                        <ul id="PrinterSettingAcardeon1" class="Acardeon">
+                                                            <li>Print Active Sheets</li>
+                                                            <li>Print Entrie Workbook</li>
+                                                            <li>Print Selection</li>
+                                                            <hr>
+                                                            <li>Ignore Print Area</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        Pages:<input type="number" placeholder="1" min="0" max="10">
+                                                        to<input type="number" placeholder="1" min="0" max="10">
+                                                    </li>
+                                                    <li id="PrinterSetting2">Collated<img src="Image Of Excel/arrowdown.png">
+                                                        <ul id="PrinterSettingAcardeon2" class="Acardeon">
+                                                            <li>Collated</li>
+                                                            <li>Uncollated</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="PrinterSetting3">Protrait Orientation<img src="Image Of Excel/arrowdown.png">
+                                                        <ul id="PrinterSettingAcardeon3" class="Acardeon">
+                                                            <li>Protrait Orientation</li>
+                                                            <li>Landscape Orientation</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="PrinterSetting4">A4<img src="Image Of Excel/arrowdown.png">
+                                                        <ul id="PrinterSettingAcardeon4" class="Acardeon">
+                                                            <li>A4</li>
+                                                            <li>A3</li>
+                                                            <li>A5</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="PrinterSetting5">Normal Margins<img src="Image Of Excel/arrowdown.png">
+                                                        <ul id="PrinterSettingAcardeon5" class="Acardeon">
+                                                            <li>Last Custom Setting</li>
+                                                            <li>Normal</li>
+                                                            <li>Wide</li>
+                                                            <li>Narrow</li>
+                                                            <hr>
+                                                            <li>Custom Margins...</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="PrinterSetting6">No Scaling<img src="Image Of Excel/arrowdown.png">
+                                                        <ul id="PrinterSettingAcardeon6" class="Acardeon">
+                                                            <li>No Scaling</li>
+                                                            <li>Fit Sheet on One Page</li>
+                                                            <li>Fit All Columns on One Page</li>
+                                                            <li>Fit All Rows on One Page</li>
+                                                            <hr>
+                                                            <li>Custom Scaling Options...</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <a href="#">Page Setup</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="radio" name="FileMenu" id="FM7">
+                                    <label for="FM7">Share</label>
+                                    <div class="subMenu">
+                                        <h1 class="FileTabTitr">Share</h1>
+                                        <h2>Share</h2>
+                                        <ul id="FileTabMenu" class="menu">
+                                            <li id="ShareIcon" class="OneDrive">
+                                                <input type="radio" name="FileTabUL" id="Share1">
+                                                <label for="Share1">Share width People</label>
+                                                <div class="subMenu">
+                                                    <div id="ShareTitr" class="TitrItems TitrOneDrive">Share width People</div>
+                                                    <h5>Step 1: Save your document to a OneDrive location</h5>
+                                                    <h5>Setp 2: Share your document. We'll do this after you've finished saving</h5>
+                                                    <div class="pictureShare"><img src="Image Of Excel/FileMenu/Save.png"></div>
+                                                </div>
+                                            </li>
+                                            <li id="EmailIcon" class="ThisPc">
+                                                <input type="radio" name="FileTabUL" id="Share2">
+                                                <label for="Share2">Email</label>
+                                                <div class="subMenu">
+                                                    <div id="ShareTitr" class="TitrItems TitrOneDrive">Email</div>
+                                                    <ul id="Items" class="TabItems">
+                                                        <li>
+                                                            <div class="picture"><img src="Image Of Excel/FileMenu/Send.png"></div>
+                                                            <div class="Tozihat">
+                                                                <h4>Eveyone gets a copy to review</h4>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="picture"><img src="Image Of Excel/FileMenu/Link.png"></div>
+                                                            <div class="Tozihat">
+                                                                <h4>Eveyone works on the same copy of this workbook</h4>
+                                                                <h4>Everyone sees the latest changes</h4>
+                                                                <h4>Keeps the email size small</h4>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="picture"><img src="Image Of Excel/FileMenu/PDF.png"></div>
+                                                            <div class="Tozihat">
+                                                                <h4>Everyone gets a PDF attachment</h4>
+                                                                <h4>Preserves layout, formatting, fonts, and image</h4>
+                                                                <h4>Content can't be easily changed</h4>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="picture"><img src="Image Of Excel/FileMenu/XPS.png"></div>
+                                                            <div class="Tozihat">
+                                                                <h4>Everyone gets an XPS attachment</h4>
+                                                                <h4>Proserves layout, formatting, fonts, and image</h4>
+                                                                <h4>Content can't be easily changed</h4>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="picture"><img src="Image Of Excel/FileMenu/Fax.png"></div>
+                                                            <div class="Tozihat">
+                                                                <h4>No fax machine needed</h4>
+                                                                <h4>You'll need a fax service provider</h4>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="radio" name="FileMenu" id="FM8">
+                                    <label for="FM8">Export</label>
+                                    <div class="subMenu">
+                                        <h1 class="FileTabTitr">Export</h1>
+                                        <ul id="FileTabMenu" class="menu">
+                                            <li id="CreateIcon" class="ThisPc">
+                                                <input type="radio" name="FileTabUL" id="Export1">
+                                                <label for="Export1">Create PDF/XPS Document</label>
+                                                <div class="subMenu">
+                                                    <div id="ShareTitr" class="TitrItems TitrOneDrive">Create a PDF/XPS Document</div>
+                                                    <h5>Preserves layout, formatting, fonts, and images</h5>
+                                                    <h5>Content can't be easily changed</h5>
+                                                    <h5>Free viewers are available on the web</h5>
+                                                    <div class="pictureShare"><img src="Image Of Excel/FileMenu/Create PDF XPS.png"></div>
+                                                </div>
+                                            </li>
+                                            <li id="ChangeIcon" class="OneDrive">
+                                                <input type="radio" name="FileTabUL" id="Export2">
+                                                <label for="Export2">Change File Type</label>
+                                                <div class="subMenu">
+                                                    <h2>No File</h2>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="radio" name="FileMenu" id="FM9">
+                                    <label for="FM9">Publish</label>
+                                    <div class="subMenu">
+                                        <h1 class="FileTabTitr">Publish</h1>
+                                        <ul id="FileTabMenu" class="menu">
+                                            <li id="PublishIcon" class="OneDrive">
+                                                <input type="radio" name="FileTabUL" id="Publish1">
+                                                <label for="Publish1">Publish to Power BI</label>
+                                                <div class="subMenu">
+                                                    <div id="ShareTitr" class="TitrItems TitrOneDrive">Publish to Power BI</div>
+                                                    <h4>Use Power BI to create, share, and organize rich visual reports and dashboards of data insights. Power BI will
+                                                         automatically refresh with updates to your workbook.</h4>
+                                                    <a href="#">Go to Power BI</a>
+                                                    <a href="#">Learn more</a>     
+                                                    <h5>Step 1:Save your document to OneDrive for Business.</h5>
+                                                    <h5>Step 2: Publish your document to Power BI.</h5>
+                                                    <div class="pictureShare"><img src="Image Of Excel/FileMenu/Save to Could.png"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        
+                                    </div>
+                                </li>
+                                <li id="CloseFileTab">
+                                    <input type="radio" name="FileMenu" id="FM10">
+                                    <label for="FM10">Close</label>
+                                </li>
+                                <hr>
+                                <li>
+                                    <input type="radio" name="FileMenu" id="FM11">
+                                    <label for="FM11">Account</label>
+                                    <div id="Account" class="subMenu">
+                                        <h1 class="FileTabTitr">Account</h1>
+                                        <div class="Cover">
+                                            <h3>Office Theme:</h3>
+                                            <div id="ChangeTheme"><span id="ColorThemeScreen">Colorful</span><img src="Image Of Excel/arrowdown.png">
+                                                <ul id="ThemeType" class="Acardeon">
+                                                    <li id="Light">Colorful</li>
+                                                    <li id="Dark">Dark Gary</li>
+                                                </ul>
+                                            </div>
+                                            <h3>Sing in to Office</h3>
+                                            <h4>Get to your document from anywhere by singing in to Office.Your
+                                                experince just gets better and more personalized on every device you
+                                                use.</h4>
+                                            <div class="SingIn">Sing In</div>
+                                        </div>
+                                        <div class="Cover">
+                                            <h2>Product Information</h2>
+                                            <div class="OfficeIcon"><img src="Image Of Excel/FileMenu/Office.png"></div>
+                                            <ul id="Items" class="TabItems">
+                                                <li>
+                                                    <div class="picture"><img src="Image Of Excel/FileMenu/About.png"></div>
+                                                    <div class="Tozihat">
+                                                        <h2>About Excel</h2>
+                                                        <h4>Learn more about Excel, Support, Product ID, and Copyright information.</h4>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="radio" name="FileMenu" id="FM12">
+                                    <label for="FM12">Options</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <li>
+                            <input type="radio" name="itemsMenu" id="item2">
+                            <label for="item2" id="TabHome">Home</label>
+                            <div id="HomeItems" class="subMenu">
+                                <div class="homeItems">
+                                    <ul class="paste"><img src="Image Of Excel/HomeImage/paste.png">Paste</ul>
+                                    <div class="right">
+                                        <div class="cut">Cut</div>
+                                            <div id="copy">Copy <img src="Image Of Excel/arrowdown.png">
+                                                <ul id="CopyAcardeon" class="Acardeon">
+                                                    <li>Copy</li>
+                                                    <li>Copy as Picture...</li>
+                                                </ul>
+                                            </div>
+                                        <div class="format">Format Painter</div>
+                                    </div>
+                                    <h5>Clipboard</h5>
+                                </div>
+                                <div class="homeItems">
+                                    <div id="font">
+                                        <div id="FontFamily">Tahoma
+                                            <ul class="Acardeon" id="FontFamilyAcardeon">
+                                                <li>Theme Fonts</li>
+                                                <li>Tahoma</li>
+                                                <li>Mitra</li>
+                                                <li>Iransans</li>
+                                                <li>Kokab</li>
+                                                <li>Roya</li>
+                                            </ul> 
+                                        </div>
+                                        <div id="FontSize">16
+                                            <ul class="Acardeon" id="FontSizeAcardeon">
+                                                <li>16</li>
+                                                <li>25</li>
+                                                <li>50</li>
+                                            </ul>
+                                        </div>
+                                        <div id="bigFont"></div>
+                                        <div id="smallFont"></div>
+                                    </div>
+                                    <div id="fontDecoration">
+                                        <input type="checkbox" name="decoration" id="bold">
+                                        <label for="bold"></label>
+                                        <input type="checkbox" name="decoration" id="movarab">
+                                        <label for="movarab"></label>
+                                        <input type="checkbox" name="decoration" id="underline">
+                                        <label for="underline"></label>
+                                    </div>
+                                    <div id="fontBorder">
+                                        <ul class="Acardeon" id="BorderAcardeon">
+                                            <li>Borders</li>
+                                            <li>Bottom Border</li>
+                                            <li>Top Border</li>
+                                            <li>Left Border</li>
+                                            <li>Right Border</li>
+                                            <li>All Border</li>
+                                        </ul> 
+                                    </div>
+                                    <div id="BgColor">
+                                        <ul class="Acardeon" id="BgColorAcardeon">
+                                            <li>Theme Colors</li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                    </div>
+                                    <div id="TextColor">
+                                        <ul class="Acardeon" id="TextColorAcardeon">
+                                            <li>Theme Colors</li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                    </div>
+                                    <h5>Font</h5>
+                                </div>
+                                <div class="homeItems">
+                                    <div id="YAlign">
+                                        <input type="checkbox" name="Align" id="YAlignTop">
+                                        <label for="YAlignTop"></label>
+                                        <input type="checkbox" name="Align" id="YAlignCenter">
+                                        <label for="YAlignCenter"></label>
+                                        <input type="checkbox" name="Align" id="YAlignBottom">
+                                        <label for="YAlignBottom"></label>
+                                    </div>
+                                    <div id="Rotate">
+                                        <ul class="Acardeon" id="RotateAcardeon">
+                                            <li>Angle Counterclockwise</li>
+                                            <li>Angle Clockwise</li>
+                                            <li>Vertical Text</li>
+                                            <li>Rotate TextUp</li>
+                                            <li>Vertical TextDown</li>
+                                            <hr>
+                                            <li>Format Cell Alignment</li>
+                                        </ul>
+                                    </div>
+                                    <div id="LTR">
+                                        <ul class="Acardeon" id="LTRAcardeon">
+                                            <li>Left-to-Right</li>
+                                            <li>Right-to-Left</li>
+                                            <li>Context</li>
+                                        </ul>
+                                    </div>
+                                    <div class="TextWrap">Wrap Text</div>
+                                    <div id="XAlign">
+                                        <input type="checkbox" name="Align" id="XAlignLeft">
+                                        <label for="XAlignLeft"></label>
+                                        <input type="checkbox" name="Align" id="XAlignCenter">
+                                        <label for="XAlignCenter"></label>
+                                        <input type="checkbox" name="Align" id="XAlignRight">
+                                        <label for="XAlignRight"></label>
+                                    </div>
+                                    <div class="Indent">
+                                        <div class="Decrease"></div>
+                                        <div class="Increase"></div>
+                                    </div>
+                                    <div id="Merge">Merge & Center<img src="Image Of Excel/arrowdown.png">
+                                        <ul class="Acardeon" id="MergeAcardeon">
+                                            <li>Merge & Center</li>
+                                            <li>Merge Across</li>
+                                            <li>Merge Cells</li>
+                                            <li>Unmerge Cells</li>
+                                        </ul>
+                                    </div>
+                                    <h5>Alignment</h5>
+                                </div>
+                                <div class="homeItems">
+                                    <div id="NumberFormat">General
+                                        <ul class="Acardeon" id="NumberFormatAcardeon">
+                                            <li>General</li>
+                                            <li>Number</li>
+                                            <li>Currency</li>
+                                            <li>Accounting</li>
+                                            <li>Short Date</li>
+                                            <li>LongDate</li>
+                                            <li>Time</li>
+                                            <li>Percentage</li>
+                                            <li>Fraction</li>
+                                            <li>Scientific</li>
+                                            <li>Text</li>
+                                            <hr>
+                                            <li>More Number Formats...</li>
+                                        </ul>
+                                    </div>
+                                    <div class="NumberStyle">
+                                        <div id="Currency">
+                                            <ul class="Acardeon" id="CurrencyAcardeon">
+                                                <li>$ English (United States)</li>
+                                                <li>£ English (United Kingdom)</li>
+                                                <li>€ Euro (€ 123)</li>
+                                                <li>¥ Chinese (PRC)</li>
+                                                <li>CHF French (Switzerland)</li>
+                                                <hr>
+                                                <li>More Accounting Formats...</li>
+                                            </ul>
+                                        </div>
+                                        <div class="Darsad"></div>
+                                        <div class="Virgol"></div>
+                                    </div>
+                                    <div class="Indent">
+                                        <div class="Decrease"></div>
+                                        <div class="Increase"></div>
+                                    </div>
+                                    <h5>Number</h5>
+                                </div>
+                                <div class="homeItems">
+                                    <div id="Conditional">
+                                        Conditional Formatting <img src="Image Of Excel/arrowdown.png">
+                                        <ul class="Acardeon" id="ConditionalAcardeon">
+                                            <li>
+                                                Highlight Cells Rules <img src="Image Of Excel/arrowdown.png">
+                                                <ul class="Acardeon">
+                                                    <li>Greater Than...</li>
+                                                    <li>Less Than...</li>
+                                                    <li>Between...</li>
+                                                    <li>Equal To...</li>
+                                                    <li>Text that Contains...</li>
+                                                    <li>A Date Occurring...</li>
+                                                    <li>Duplicate Values...</li>
+                                                    <hr>
+                                                    <li>More Rules...</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                Top/Bottom Rules <img src="Image Of Excel/arrowdown.png">
+                                                <ul class="Acardeon">
+                                                    <li>Top 10 Items...</li>
+                                                    <li>Top 10 %...</li>
+                                                    <li>Bottom 10 Items...</li>
+                                                    <li>Bottom 10 %...</li>
+                                                    <li>Above Average...</li>
+                                                    <li>Below Average...</li>
+                                                    <hr>
+                                                    <li>More Rules...</li>
+                                                </ul>
+                                            </li>
+                                            <hr>
+                                            <li>Data Bars <img src="Image Of Excel/arrowdown.png"></li>
+                                            <li>Color Scales <img src="Image Of Excel/arrowdown.png"></li>
+                                            <li>Icon Sets <img src="Image Of Excel/arrowdown.png"></li>
+                                            <hr>
+                                            <li>New Rule...</li>
+                                            <li>Clear Rules <img src="Image Of Excel/arrowdown.png"></li>
+                                            <li>Manage Rules...</li>
+                                        </ul>
+                                    </div>
+                                    <div id="ForamtTable">
+                                        Foramt as Table <img src="Image Of Excel/arrowdown.png">
+                                        <ul class="Acardeon" id="FormatTableAcardeon">
+                                            <li>Light</li>
+                                            <li><img src="Image Of Excel/Table01.png"></li>
+                                            <li><img src="Image Of Excel/Table02.png"></li>
+                                            <li><img src="Image Of Excel/Table03.png"></li>
+                                            <li><img src="Image Of Excel/Table04.png"></li>
+                                        </ul>
+                                    </div>
+                                    <div class="RowStyle">
+                                        <input type="radio" name="RowStyle" id="Normal">
+                                        <label for="Normal">Normal</label>
+                                        <input type="radio" name="RowStyle" id="Bad">
+                                        <label for="Bad">Bad</label>
+                                        <input type="radio" name="RowStyle" id="Good">
+                                        <label for="Good">Good</label>
+                                        <input type="radio" name="RowStyle" id="Neutral">
+                                        <label for="Neutral">Neutral</label>
+                                        <input type="radio" name="RowStyle" id="Calcution">
+                                        <label for="Calcution">Calcution</label>
+                                        <input type="radio" name="RowStyle" id="CheckCell">
+                                        <label for="CheckCell">CheckCell</label>
+                                        <input type="radio" name="RowStyle" id="Explanatory">
+                                        <label for="Explanatory">Explanatory</label>
+                                        <input type="radio" name="RowStyle" id="Input">
+                                        <label for="Input">Input</label>
+                                    </div>
+                                    <h5>Style</h5>
+                                </div>
+                                <div class="homeItems">
+                                    <div id="InsertCell">
+                                        Insert <img src="Image Of Excel/arrowdown.png">
+                                        <ul class="Acardeon" id="InsertCellAcardeon">
+                                            <li>Insert Cells...</li>
+                                            <hr>
+                                            <li>Insert Sheet Rows</li>
+                                            <li>Insert Sheet Columns</li>
+                                            <hr>
+                                            <li>Insert Sheet</li>
+                                        </ul>
+                                    </div>
+                                    <div id="DeleteCell">
+                                        Delete <img src="Image Of Excel/arrowdown.png">
+                                        <ul class="Acardeon" id="DeleteCellAcardeon">
+                                            <li>Delete Cells...</li>
+                                            <hr>
+                                            <li>Delete Sheet Rows</li>
+                                            <li>Delete Sheet Columns</li>
+                                            <hr>
+                                            <li>Delete Sheet</li>
+                                        </ul>
+                                    </div>
+                                    <div id="FormatCell">
+                                        Format <img src="Image Of Excel/arrowdown.png">
+                                        <ul class="Acardeon" id="FormatCellAcardeon">
+                                            <li>Cell Size</li>
+                                            <li>Row Height...</li>
+                                            <li>AutoFit Row Height</li>
+                                            <hr>
+                                            <li>Column Width...</li>
+                                            <li>AutoFit Column Width</li>
+                                            <li>Default Width...</li>
+                                        </ul>
+                                    </div>
+                                    <h5>Cells</h5>
+                                </div>
+                                <div class="homeItems">
+                                    <div class="EditLeft">
+                                        <div id="Autosum">
+                                            AutoSum <img src="Image Of Excel/arrowdown.png">
+                                            <ul class="Acardeon" id="AutosumAcardeon">
+                                                <li>Sum</li>
+                                                <li>Average</li>
+                                                <li>Count Numbers</li>
+                                                <li>Max</li>
+                                                <li>Min</li>
+                                                <hr>
+                                                <li>More Functions...</li>
+                                            </ul>
+                                        </div>
+                                        <div id="Fill">
+                                            Fill <img src="Image Of Excel/arrowdown.png">
+                                            <ul class="Acardeon" id="FillAcardeon">
+                                                <li>Down</li>
+                                                <li>Right</li>
+                                                <li>Up</li>
+                                                <li>Left</li>
+                                                <li>Across Worksheets...</li>
+                                                <li>Series</li>
+                                                <li>Justify</li>
+                                                <li>Flash Fill</li>
+                                            </ul>
+                                        </div>
+                                        <div id="Clear">
+                                            Clear <img src="Image Of Excel/arrowdown.png">
+                                            <ul class="Acardeon" id="ClearAcardeon">
+                                                <li>Clear All</li>
+                                                <li>Clear Formats</li>
+                                                <li>Clear Contents</li>
+                                                <li>Clear Comments</li>
+                                                <li>Clear Hyperlinks</li>
+                                                <hr>
+                                                <li>Remove Hyperlinks</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="EditRight">
+                                        <div id="Sort">
+                                            Sort & Filter <img src="Image Of Excel/arrowdown.png">
+                                            <ul class="Acardeon" id="SortAcardeon">
+                                                <li>Sort A to Z</li>
+                                                <li>Sort Z to A</li>
+                                                <li>Custom Sort...</li>
+                                                <hr>
+                                                <li>Filter</li>
+                                                <li>Clear</li>
+                                                <li>Reapply</li>
+                                            </ul>
+                                        </div>
+                                        <div id="Find">
+                                            Find & Select <img src="Image Of Excel/arrowdown.png">
+                                            <ul class="Acardeon" id="FindAcardeon">
+                                                <li>Find</li>
+                                                <li>Replace...</li>
+                                                <li>Go To</li>
+                                                <li>Go To Special...</li>
+                                                <hr>
+                                                <li>Formulas</li>
+                                                <li>Comments</li>
+                                                <li>Conditional Formatting</li>
+                                                <li>Constants</li>
+                                                <li>Data Validation</li>
+                                                <hr>
+                                                <li>Select Objects</li>
+                                                <li>Selection Pane...</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h5>Editting</h5>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="itemsMenu" id="item3">
+                            <label for="item3">Insert</label>
+                            <div  id="InsertItems" class="subMenu">
+                                <ul class="ExcelTabItems">
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="Pivot">PivotTable</li>
+                                            <li  class="PivotTable">Recommended PivotTable</li>
+                                            <li class="Table">Table</li>
+                                        </ul>
+                                        <h5>Tables</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="InsertTabPicture">Picture</li>
+                                            <li class="InsertTabOnlinePicture">Online Picture</li>
+                                            <li class="InsertTabToolsPicture BoxShadow">
+                                                <div id="Shape">Shape <img src="Image Of Excel/arrowdown.png">
+                                                    <ul id="ShapeMenu" class="Acardeon">
+                                                        <li class="Titr">Recently Used Shapes</li>
+                                                        <li></li>
+                                                        <li></li>
+                                                        <li></li>
+                                                        <li></li>
+                                                        <li></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="SmartArt">SmartArt</div>
+                                                <div class="ScreenShot">ScreenShot</div>
+                                            </li>
+                                        </ul>
+                                        <h5>Illustrations</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="MySelfAdd BoxShadow">
+                                                <div class="Store">Store</div>
+                                                <div id="MyAdd">My Add-ins <img src="Image Of Excel/arrowdown.png">
+                                                    <ul id="MyAddMenu" class="Acardeon">
+                                                        <li class="Titr">Recently Used Shapes</li>
+                                                        <li>No Add-ins have been inserted recently</li>
+                                                        <li>See All...</li>
+                                                        <li class="Titr">Other Add-ins</li>
+                                                        <li>Manage Other Add-ins...</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="OtherAdd BoxShadow">
+                                                <div class="Visio">Visio Data Visualizer</div>
+                                                <div class="BingMap">Bing Maps</div>
+                                                <div class="Graph">People Graph</div>
+                                            </li>
+                                        </ul>
+                                        <h5>Add-ins</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="InsertChart">Recommended Charts</li>
+                                            <li class="ChartType BoxShadow">
+                                                <ul class="ChartTypeMenu AllIcon">
+                                                    <li id="ColumnChart" class="ItemsIcon">
+                                                        <ul id="ColumnChartMenu" class="Acardeon Icon">
+                                                            <li class="Titr">2-D Column</li>
+                                                            <li></li>
+                                                            <li></li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="HierarchyChart" class="ItemsIcon">
+                                                        <ul id="HierarchyChartMenu" class="Acardeon Icon">
+                                                            <li class="Titr">ThreeMap</li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="StockChart" class="ItemsIcon">
+                                                        <ul id="StockChartMenu" class="Acardeon Icon">
+                                                            <li class="Titr">Waterfall</li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="LineChart" class="ItemsIcon">
+                                                        <ul id="LineChartMenu" class="Acardeon Icon">
+                                                            <li class="Titr">2-D Line</li>
+                                                            <li></li>
+                                                            <li></li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="StaticChart" class="ItemsIcon">
+                                                        <ul id="StaticChartMenu" class="Acardeon Icon">
+                                                            <li class="Titr">Histogram</li>
+                                                            <li></li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="ComboChart" class="ItemsIcon">
+                                                        <ul id="ComboChartMenu" class="Acardeon Icon">
+                                                            <li class="Titr">Combo</li>
+                                                            <li></li>
+                                                            <li></li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="PieChart" class="ItemsIcon">
+                                                        <ul id="PieChartMenu" class="Acardeon Icon">
+                                                            <li class="Titr">2-D Pie</li>
+                                                            <li></li>
+                                                            <li></li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="ScatterChart" class="ItemsIcon">
+                                                        <ul id="ScatterChartMenu" class="Acardeon Icon">
+                                                            <li class="Titr">Scatter</li>
+                                                            <li></li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="RadarChart" class="ItemsIcon">
+                                                        <ul id="RadarChartMenu" class="Acardeon Icon">
+                                                            <li class="Titr">Surface</li>
+                                                            <li></li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li id="PivotChart">Pivot Chart <img src="Image Of Excel/arrowdown.png">
+                                                <ul id="PivotChartMenu" class="Acardeon">
+                                                    <li>PivotChart</li>
+                                                    <li>PivotChart & PivotTable</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h5>Charts</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li id="ThreeDMap">3D Map <img src="Image Of Excel/arrowdown.png">
+                                                <ul id="ThreeDMapMenu" class="Acardeon">
+                                                    <li>Open 3D Maps</li>
+                                                    <li>Add Selected Data to 3D Maps</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h5>Tours</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="Line">Line</li>
+                                            <li class="Column">Column</li>
+                                            <li class="Win-Loss">Win/ Loss</li>
+                                        </ul>
+                                        <h5>Sparklines</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="Slicer">Slicer</li>
+                                            <li class="TimeLine">TimeLine</li>
+                                        </ul>
+                                        <h5>Filters</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="InserTab-HyperLink">HyperLink</li>
+                                        </ul>
+                                        <h5>Links</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="TextBox">Text Box</li>
+                                            <li class="Header-Footer">Header & Footer</li>
+                                            <li class="WordType BoxShadow">
+                                                <div id="WordArt">WordArt <img src="Image Of Excel/arrowdown.png">
+                                                    <ul id="WordArtMenu" class="Acardeon">
+                                                        <li></li>
+                                                        <li></li>
+                                                        <li></li>
+                                                    </ul>
+                                                </div>
+                                                <div id="Signature">Signature Line <img src="Image Of Excel/arrowdown.png">
+                                                    <ul id="SignatureMenu" class="Acardeon">
+                                                        <li>Microsoft Office Signature Line...</li>
+                                                        <hr>
+                                                        <li>Add Signature Services...</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="Object">Object</div>
+                                            </li>
+                                        </ul>
+                                        <h5>Text</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="Marks BoxShadow">
+                                                <div id="Equation">Equation <img src="Image Of Excel/arrowdown.png">
+                                                    <ul id="EquationMenu" class="Acardeon">
+                                                        <li class="Titr">Area of Circle</li>
+                                                        <li><img src="Image Of Excel/InsertImage/EquationItems.png"></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="Symbol">Symbol</div>
+                                            </li>
+                                        </ul>
+                                        <h5>Symbols</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="itemsMenu" id="item4">
+                            <label for="item4">Page Layout</label>
+                            <div id="LayoutItems" class="subMenu">
+                                <ul class="ExcelTabItems">
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li id="ThemeType2">Themes<img src="Image Of Excel/arrowdown.png">
+                                                <ul id="ThemeType2Menu" class="Acardeon OfficeItems">
+                                                    <li class="Titr">Office</li>
+                                                    <li><img src="Image Of Excel/InsertImage/Office.png">Office</li>
+                                                    <li><img src="Image Of Excel/InsertImage/Facet.png">Facet</li>
+                                                    <li><img src="Image Of Excel/InsertImage/Integral.png">Integral</li>
+                                                    <li><img src="Image Of Excel/InsertImage/Ion.png">Ion</li>
+                                                </ul>
+                                            </li>
+                                            <li class="ThemeStyle BoxShadow">
+                                                <div id="ThemeColor">Colors <img src="Image Of Excel/arrowdown.png">
+                                                    <ul id="ThemeColorMenu" class="Acardeon">
+                                                        <li class="Titr">Office</li>
+                                                        <li><img src="Image Of Excel/InsertImage/ThemeColor1.png">Office</li>
+                                                        <li><img src="Image Of Excel/InsertImage/ThemeColor2.png">Office 2007-2010</li>
+                                                    </ul>
+                                                </div>
+                                                <div id="ThemeFont">Fonts <img src="Image Of Excel/arrowdown.png">
+                                                    <ul id="ThemeFontMenu" class="Acardeon">
+                                                        <li class="Titr">Office</li>
+                                                        <li>Tahoma</li>
+                                                        <li>Mitra</li>
+                                                    </ul>
+                                                </div>
+                                                <div id="ThemeEffect">Effects <img src="Image Of Excel/arrowdown.png">
+                                                    <ul id="ThemeEffectMenu" class="Acardeon OfficeItems">
+                                                        <li class="Titr">Office</li>
+                                                        <li><img src="Image Of Excel/InsertImage/Office2.png">Office</li>
+                                                        <li><img src="Image Of Excel/InsertImage/Office20.png">Office 20</li>
+                                                        <li><img src="Image Of Excel/InsertImage/Subtel.png">Integral</li>
+                                                        <li><img src="Image Of Excel/InsertImage/Banded.png">Ion</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <h5>Themes</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li id="Margins">Margins<img src="Image Of Excel/arrowdown.png">
+                                                <ul id="MarginsMenu" class="Acardeon">
+                                                    <li>Last Custom Setting</li>
+                                                    <li>Normal</li>
+                                                </ul>
+                                            </li>
+                                            <li id="Orientation">Orientation<img src="Image Of Excel/arrowdown.png">
+                                                <ul id="OrientationMenu" class="Acardeon">
+                                                    <li>Portrait</li>
+                                                    <li>Landscape</li>
+                                                </ul>
+                                            </li>
+                                            <li id="Size">Size<img src="Image Of Excel/arrowdown.png">
+                                                <ul id="SizeMenu" class="Acardeon">
+                                                    <li>A3</li>
+                                                    <li>A4</li>
+                                                    <li>A5</li>
+                                                </ul>
+                                            </li>
+                                            <li id="PrintArea">PrintArea<img src="Image Of Excel/arrowdown.png">
+                                                <ul id="PrintAreaMenu" class="Acardeon">
+                                                    <li>Set Print Area</li>
+                                                    <li>Clear Print Area</li>
+                                                </ul>
+                                            </li>
+                                            <li id="Breaks">Breaks<img src="Image Of Excel/arrowdown.png">
+                                                <ul id="BreaksMenu" class="Acardeon">
+                                                    <li>Insert Page Brake</li>
+                                                    <li>Remove Page Brake</li>
+                                                    <hr>
+                                                    <li>Reset All Page Brakes</li>
+                                                </ul>
+                                            </li>
+                                            <li class="BackgroundSheet">Background</li>
+                                            <li class="PrintTitles">Print Titles</li>
+                                        </ul>
+                                        <h5>Page Setup</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="WidthSheet BoxShadow">Width:
+                                                <div id="WidthWorkbook">Automatic<img src="Image Of Excel/arrowdown.png">
+                                                    <ul id="WidthMenu" class="Acardeon">
+                                                    <li>Automatic</li>
+                                                    <li>page 1</li>
+                                                    <li>page 2</li>
+                                                    <li>page 3</li>
+                                                </ul>
+                                                </div>
+                                            </li>
+                                            <li class="HeightSheet BoxShadow">Height:
+                                                <div id="HeightWorkbook">Automatic<img src="Image Of Excel/arrowdown.png">
+                                                    <ul id="HeightMenu" class="Acardeon">
+                                                    <li>Automatic</li>
+                                                    <li>page 1</li>
+                                                    <li>page 2</li>
+                                                    <li>page 3</li>
+                                                </ul>
+                                                </div>
+                                            </li>
+                                            <li class="ScaleSheet BoxShadow">Scale:
+                                                <input type="number" min="0" max="200" value="100">
+                                            </li>
+                                        </ul>
+                                        <h5>Scale th Fit</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="PageSide">SheetRight-to-Left</li>
+                                            <li class="Gridlines BoxShadow">Gridlines
+                                                <input type="checkbox" name="Gridlines" id="View1">
+                                                <label for="View1">View</label>
+                                                <input type="checkbox" name="Gridlines" id="Print1">
+                                                <label for="Print1">Print</label>
+                                            </li>
+                                            <li class="Headings BoxShadow">Headings
+                                                <input type="checkbox" name="Headings" id="View2">
+                                                <label for="View2">View</label>
+                                                <input type="checkbox" name="Headings" id="Print2">
+                                                <label for="Print2">Print</label>
+                                            </li>
+                                        </ul>
+                                        <h5>Sheet Options</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li id="Bring">Bring Forward<img src="Image Of Excel/arrowdown.png">
+                                                <ul id="BringMenu" class="Acardeon">
+                                                    <li>Bring Forward</li>
+                                                    <li>Bring to Front</li>
+                                                </ul>
+                                            </li>
+                                            <li id="Send">Send Backward<img src="Image Of Excel/arrowdown.png">
+                                                <ul id="SendMenu" class="Acardeon">
+                                                    <li>Send Backward</li>
+                                                    <li>Send to Back</li>
+                                                </ul>
+                                            </li>
+                                            <li class="Pane">Selection Pane</li>
+                                            <li id="AlignObject">Align<img src="Image Of Excel/arrowdown.png">
+                                                <ul id="AlignMenu" class="Acardeon">
+                                                    <li>Align Left</li>
+                                                    <li>Align Center</li>
+                                                    <li>Align Right</li>
+                                                    <hr>
+                                                    <li>Align Top</li>
+                                                    <li>Align Middle</li>
+                                                    <li>Align Bottom</li>
+                                                </ul>
+                                            </li>
+                                            <li id="Group" class="BoxShadow">Group<img src="Image Of Excel/arrowdown.png"></li>
+                                            <li id="RotateObject" class="BoxShadow">Rotate<img src="Image Of Excel/arrowdown.png"></li>
+                                        </ul>
+                                        <h5>Arrange</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="itemsMenu" id="item5">
+                            <label for="item5">Formulas</label>
+                            <div id="FormulasItems" class="subMenu">
+                                <ul class="ExcelTabItems">
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="insertFunction">Insert Function</li>
+                                            <li id="autoSum2">AutoSum
+                                                <ul id="autoSum2Menu" class="Acardeon">
+                                                    <li>Sum</li>
+                                                    <li>Average</li>
+                                                    <li>Max</li>
+                                                    <li>Min</li>
+                                                </ul>
+                                            </li>
+                                            <li id="recentlyUsed">Recently Used
+                                                <ul id="recentlyUsedMenu" class="Acardeon">
+                                                    <li>IF</li>
+                                                    <li>SUM</li>
+                                                    <li>MAX</li>
+                                                    <li>SIN</li>
+                                                    <hr>
+                                                    <li>Insert Function...</li>
+                                                </ul>
+                                            </li>
+                                            <li id="financial">Financial
+                                                <ul id="financialMenu" class="Acardeon">
+                                                    <li>DB</li>
+                                                    <li>DDB</li>
+                                                    <li>DISC</li>
+                                                    <li>FV</li>
+                                                </ul>
+                                            </li>
+                                            <li id="logical">Logical
+                                                <ul id="logicalMenu" class="Acardeon">
+                                                    <li>IF</li>
+                                                    <li>OR</li>
+                                                    <li>TRUE</li>
+                                                    <li>NOT</li>
+                                                </ul>
+                                            </li>
+                                            <li id="functionText">Text
+                                                <ul id="functionTextMenu" class="Acardeon">
+                                                    <li>CODE</li>
+                                                    <li>CLEAN</li>
+                                                    <li>CHAR</li>
+                                                    <li>FIND</li>
+                                                </ul>
+                                            </li>
+                                            <li id="functionDate">Date & Time
+                                                <ul id="functionDateMenu" class="Acardeon">
+                                                    <li>DATE</li>
+                                                    <li>DAY</li>
+                                                    <li>HOUR</li>
+                                                    <li>DAYS</li>
+                                                    <li>EDATE</li>
+                                                </ul>
+                                            </li>
+                                            <li id="lookup">Lookup & Reference
+                                                <ul id="lookupMenu" class="Acardeon">
+                                                    <li>ADDRESS</li>
+                                                    <li>CHOOSE</li>
+                                                    <li>RDT</li>
+                                                    <li>OFFSET</li>
+                                                </ul>
+                                            </li>
+                                            <li id="math">Math & Trig
+                                                <ul id="mathMenu" class="Acardeon">
+                                                    <li>COS</li>
+                                                    <li>ABS</li>
+                                                    <li>CSC</li>
+                                                    <li>CSCH</li>
+                                                </ul>
+                                            </li>
+                                            <li id="more">More Function
+                                                <ul id="moreMenu" class="Acardeon">
+                                                    <li>Cube</li>
+                                                    <li>Web</li>
+                                                    <li>Information</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h5>Function Library</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="Manager">Name Manage</li>
+                                            <li class="Defined BoxShadow">
+                                                <div id="DefineName">Define Name<img src="Image Of Excel/arrowdown.png">
+                                                    <ul id="DefineNameMenu" class="Acardeon">
+                                                        <li>Define Name</li>
+                                                        <li>Apply Name</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="Formula">Use in Formula</div>
+                                                <div class="CreateSelection">Create from Selection</div>
+                                            </li>
+                                        </ul>
+                                        <h5>Defined Names</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="Trace BoxShadow">
+                                                <div>Trace Precedents</div>
+                                                <div>Trace Dependents</div>
+                                                <div id="RemoveArrow">Remove Arrows<img src="Image Of Excel/arrowdown.png">
+                                                    <ul id="RemoveArrowMenu" class="Acardeon">
+                                                        <li>Remove Arrows</li>
+                                                        <hr>
+                                                        <li>Remove Precedent Arrows</li>
+                                                        <li>Remove Dependent Arrows</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="Auditing BoxShadow">
+                                                <div>Show Formulas</div>
+                                                <div id="Error2">Error Checking<img src="Image Of Excel/arrowdown.png">
+                                                    <ul id="ErrorMenu" class="Acardeon">
+                                                        <li>Error Checking...</li>
+                                                        <li>Trace Error</li>
+                                                    </ul>
+                                                </div>
+                                                <div>Evaluate Formula</div>
+                                            </li>
+                                            <li class="WatchWindow">Watch Window</li>
+                                        </ul>
+                                        <h5>Formula Auditing</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li id="CalculationLeft">Calculation Options<img src="Image Of Excel/arrowdown.png">
+                                                <ul id="CalculationLeftMenu" class="Acardeon">
+                                                    <li>Automatic</li>
+                                                    <li>Automatic Except for Data Tables</li>
+                                                    <li>Manual</li>
+                                                </ul>  
+                                            </li>
+                                            <li class="CalculationRight BoxShadow">
+                                                <div>Calculation Now</div>
+                                                <div>Calculation Sheet</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="itemsMenu" id="item6">
+                            <label for="item6">Data</label>
+                            <div id="DataItems" class="subMenu">
+                                <ul class="ExcelTabItems">
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="FromAccess">From Access</li>
+                                            <li class="FromWeb">From Web</li>
+                                            <li class="FromText">From Text</li>
+                                            <li id="FromSources" class="ArrowPicture">From Sources <img src="Image Of Excel/arrowdown.png">
+                                                <ul id="FromSourcesMenu" class="Acardeon">
+                                                    <li>From SQL Server</li>
+                                                    <li>From Analysis Services</li>
+                                                    <li>From Windows Azure Marketplace</li>
+                                                </ul> 
+                                            </li>
+                                            <li class="Existing">Existing Connections</li>
+                                        </ul>
+                                        <h5>Get External Data</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li id="Query" class="ArrowPicture">New Query <img src="Image Of Excel/arrowdown.png">
+                                                <ul id="QueryMenu" class="Acardeon">
+                                                    <li class="BigHeight">From File</li>
+                                                    <li class="BigHeight">From Database</li>
+                                                    <li class="BigHeight">From Azure</li>
+                                                    <li class="BigHeight">From Other Sources</li>
+                                                    <hr>
+                                                    <li class="BigHeight">Combine Queries</li>
+                                                    <hr>
+                                                    <li>Data Catalog Search</li>
+                                                    <li>My Data Catalog Querise</li>
+                                                    <hr>
+                                                    <li>Data Source Settings...</li>
+                                                    <li>Query Options</li>
+                                                </ul> 
+                                            </li>
+                                            <li class="transform BoxShadow">
+                                                <div>Show Queries</div>
+                                                <div>From Table</div>
+                                                <div>Recent Sources</div>
+                                            </li>
+                                        </ul>
+                                        <h5>Get & Transform</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li id="RefreshAll" class="ArrowPicture">Refresh All <img src="Image Of Excel/arrowdown.png">
+                                                <ul id="RefreshAllMenu" class="Acardeon">
+                                                    <li>Refresh All</li>
+                                                    <li>Refresh</li>
+                                                    <li>Refresh Status</li>
+                                                    <li>Cancel Refresh</li>
+                                                    <hr>
+                                                    <li>Connection Propertise</li>
+                                                </ul> 
+                                            </li>
+                                            <li class="Connection BoxShadow">
+                                                <div>Connections</div>
+                                                <div>Properties</div>
+                                                <div>Edit Links</div>
+                                            </li>
+                                        </ul>
+                                        <h5>Connections</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="Sort">Sort</li>
+                                            <li class="Filter">Filter</li>
+                                            <li class="FilterItems BoxShadow">
+                                                <div>Clear</div>
+                                                <div>Reapply</div>
+                                                <div>Advanced</div>
+                                            </li>
+                                        </ul>
+                                        <h5>Sort & Filter</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="Text-Columns">Text to Columns</li>
+                                            <li class="FlashFill">Flash Fill</li>
+                                            <li class="Remove-Duplicates">Remove Duplicates</li>
+                                            <li id="Validation" class="ArrowPicture">Data Validation
+                                                <ul id="ValidationMenu" class="Acardeon">
+                                                    <li>Data Validation</li>
+                                                    <li>Circle Invalid Data</li>
+                                                    <li>Clear Validation Cricles</li>
+                                                </ul>
+                                            </li>
+                                            <li class="Consolidate">Consolidate</li>
+                                            <li class="Relationships">Relationships</li>
+                                            <li class="Manage-Data">Manage Data</li>
+                                        </ul>
+                                        <h5>Data Tools</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li id="Analysis" class="ArrowPicture">What-If-Analysis
+                                                <ul id="AnalysisMenu" class="Acardeon">
+                                                    <li>Scenario Manager</li>
+                                                    <li>Goal Seek</li>
+                                                    <li>Data Table</li>
+                                                </ul>
+                                            </li>
+                                            <li class="Forecast">Forecast Sheet</li>
+                                        </ul>
+                                        <h5>Forecast</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li id="GroupOutline" class="ArrowPicture">Group
+                                                <ul id="GroupOutlineMenu" class="Acardeon">
+                                                    <li>Group...</li>
+                                                    <li>Auto Outline</li>
+                                                </ul>
+                                            </li>
+                                            <li id="Ungroup" class="ArrowPicture">Ungroup
+                                                <ul id="UngroupMenu" class="Acardeon">
+                                                    <li>Ungroup...</li>
+                                                    <li>Clear Outline</li>
+                                                </ul>
+                                            </li>
+                                            <li class="Subtotal">Subtotal</li>
+                                        </ul>
+                                        <h5>Outline</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="itemsMenu" id="item7">
+                            <label for="item7">Review</label>
+                            <div id="ReviewItems" class="subMenu">
+                                <ul class="ExcelTabItems">
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="Spell">Spelling</li>
+                                            <li class="Thesaurus">Thesaurus</li>
+                                        </ul>
+                                        <h5>Proofing</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="SmartLockup">Smart Lockup</li>
+                                        </ul>
+                                        <h5>Insights</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="Translate">Translate</li>
+                                        </ul>
+                                        <h5>Language</h5>
+                                    </li>
+                                    <!-- Com = Comment -->
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="NewCom">New Comment</li>
+                                            <li class="DeleteCom">Delete</li>
+                                            <li class="PreviousCom">Previous</li>
+                                            <li class="NextCom">Next</li>
+                                            <li class="ShowCom BoxShadow">
+                                                <div class="ShowCom-HideCom">Show/Hide Comment</div>
+                                                <div class="ShowAll">Show All Comments</div>
+                                                <div class="ShowInk">Show Ink</div>
+                                            </li>
+                                        </ul>
+                                        <h5>Comments</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="ProtectSheet">Protect Sheet</li>
+                                            <li class="ProtectWorkbook">Protect Workbook</li>
+                                            <li class="ShareWorkbook">Share Workbook</li>
+                                            <li class="Change BoxShadow">
+                                                <div class="Protect-Share">Protect and Share Workbook</div>
+                                                <div class="AllowUser">Allow Users to Edit Ranges</div>
+                                                <div id="Track">Track Changes <img src="Image Of Excel/arrowdown.png">
+                                                    <ul id="TrackMenu" class="Acardeon">
+                                                        <li>Highlite Changes...</li>
+                                                        <li>Accpet/Reject Changes</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <h5>Changes</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="itemsMenu" id="item8">
+                            <label for="item8">View</label>
+                            <div id="ViewItems" class="subMenu">
+                                <ul class="ExcelTabItems">
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="ViewNormal">Normal</li>
+                                            <li class="ViewBreak">Page Break Preview</li>
+                                            <li class="ViewLayout">Page Layout</li>
+                                            <li class="ViewCustom">Custom View</li>
+                                        </ul>
+                                        <h5>Workbook Views</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items ShowSheet">
+                                            <input type="checkbox" name="Show" id="Show1">
+                                            <label for="Show1">Ruler</label>
+                                            <input type="checkbox" name="Show" id="Show2">
+                                            <label for="Show2">Formula Bar</label>
+                                            <input type="checkbox" name="Show" id="Show3">
+                                            <label for="Show3">Gridlines</label>
+                                            <input type="checkbox" name="Show" id="Show4">
+                                            <label for="Show4">Headings</label>
+                                        </ul>
+                                        <h5>Show</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="Zoom">Zoom</li>
+                                            <li class="Page100">100%</li>
+                                            <li class="ZoomtoSelection">Zoom to Selection</li>
+                                        </ul>
+                                        <h5>Zoom</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li class="NewWindow">New Window</li>
+                                            <li class="Arrange">Arrange All</li>
+                                            <li id="Freeze">Freeze Panes
+                                                <ul id="FreezeMenu" class="Acardeon">
+                                                    <li>Freeze Panes</li>
+                                                    <li>Freeze Top Row</li>
+                                                    <li>Freeze First Column</li>
+                                                </ul>
+                                            </li>
+                                            <li class="WindowType BoxShadow">
+                                                <div class="Split">Split</div>
+                                                <div class="WindowHide">Hide</div>
+                                                <div class="Unhide">Unhide</div>
+                                            </li>
+                                            <li class="ViewWindow BoxShadow">
+                                                <div class="ViewSide">View Side by Side</div>
+                                                <div class="Synchronous">Synchronous Scrolling</div>
+                                                <div class="ResetWindow">Reset Window Position</div>
+                                            </li>
+                                            <li id="Switch">Switch Windows
+                                                <ul id="SwitchMenu" class="Acardeon">
+                                                    <li>1 Book1</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h5>Window</h5>
+                                    </li>
+                                    <li class="PartOfTabItems">
+                                        <ul class="Items">
+                                            <li id="Macros">Macros
+                                                <ul id="MacrosMenu" class="Acardeon">
+                                                    <li>View Macros</li>
+                                                    <li>Record Macros...</li>
+                                                    <hr>
+                                                    <li>Use Relative References</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <h5>Macros</h5>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="search">
+                            <input id="SheetSearch" type="text" placeholder="Tell me what you want to do...">
+                        </li>
+                        <li> Sing in </li>
+                        <li> Share </li>
+                    </ul>
+                </div>
+                <!-- Sheet -->
+                <div id="MohiteKar" class="content">
+                    <div class="bar">
+                        <div id="Box" class="boxName"></div>
+                        <div id="InsertFunction" class="insertFunction">
+                            <div id="zarbdar"></div>
+                            <div id="tik"></div>
+                            <div id="FormulaSheet"></div>
+                        </div>
+                        <input id="SearchMohitekar" type="text">
+                    </div>
+                    <ul id="word">
+                        <li id="SelectAllSelol"></li>
+                        <li>A</li>
+                        <li>B</li>
+                        <li>C</li>
+                        <li>D</li>
+                        <li>E</li>
+                        <li>F</li>
+                        <li>G</li>
+                        <li>H</li>
+                        <li>I</li>
+                        <li>J</li>
+                        <li>K</li>
+                        <li>L</li>
+                        <li>M</li>
+                        <li>N</li>
+                    </ul>
+                    <div id="Stage">
+                        <ul id="NumberOfSelol">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                            <li>10</li>
+                            <li>11</li>
+                            <li>12</li>
+                            <li>13</li>
+                            <li>14</li>
+                            <li>15</li>
+                        </ul>
+                        <div id="Selol">
+                            <table>
+                            <input type="text" onclick="SelolID(0)"><input type="text" onclick="SelolID(1)"><input type="text" onclick="SelolID(2)"><input type="text" onclick="SelolID(3)"><input type="text" onclick="SelolID(4)">
+                            <input type="text" onclick="SelolID(5)"><input type="text" onclick="SelolID(6)"><input type="text" onclick="SelolID(7)"><input type="text" onclick="SelolID(8)"><input type="text" onclick="SelolID(9)">
+                            <input type="text" onclick="SelolID(10)"><input type="text" onclick="SelolID(11)"><input type="text" onclick="SelolID(12)"><input type="text" onclick="SelolID(13)"><input type="text" onclick="SelolID(14)">
+                            <input type="text" onclick="SelolID(15)"><input type="text" onclick="SelolID(16)"><input type="text" onclick="SelolID(17)"><input type="text" onclick="SelolID(18)"><input type="text" onclick="SelolID(19)">
+                            <input type="text" onclick="SelolID(20)"><input type="text" onclick="SelolID(21)"><input type="text" onclick="SelolID(22)"><input type="text" onclick="SelolID(23)"><input type="text" onclick="SelolID(24)">
+                            <input type="text" onclick="SelolID(25)"><input type="text" onclick="SelolID(26)"><input type="text" onclick="SelolID(27)"><input type="text" onclick="SelolID(28)"><input type="text" onclick="SelolID(29)">
+                            <input type="text" onclick="SelolID(30)"><input type="text" onclick="SelolID(31)"><input type="text" onclick="SelolID(32)"><input type="text" onclick="SelolID(33)"><input type="text" onclick="SelolID(34)">
+                            <input type="text" onclick="SelolID(35)"><input type="text" onclick="SelolID(36)"><input type="text" onclick="SelolID(37)"><input type="text" onclick="SelolID(38)"><input type="text" onclick="SelolID(39)">
+                            <input type="text" onclick="SelolID(40)"><input type="text" onclick="SelolID(41)"><input type="text" onclick="SelolID(42)"><input type="text" onclick="SelolID(43)"><input type="text" onclick="SelolID(44)">
+                            <input type="text" onclick="SelolID(45)"><input type="text" onclick="SelolID(46)"><input type="text" onclick="SelolID(47)"><input type="text" onclick="SelolID(48)"><input type="text" onclick="SelolID(49)">
+                            <input type="text" onclick="SelolID(50)"><input type="text" onclick="SelolID(51)"><input type="text" onclick="SelolID(52)"><input type="text" onclick="SelolID(53)"><input type="text" onclick="SelolID(54)">
+                            <input type="text" onclick="SelolID(55)"><input type="text" onclick="SelolID(56)"><input type="text" onclick="SelolID(57)"><input type="text" onclick="SelolID(58)"><input type="text" onclick="SelolID(59)">
+                            <input type="text" onclick="SelolID(60)"><input type="text" onclick="SelolID(61)"><input type="text" onclick="SelolID(62)"><input type="text" onclick="SelolID(63)"><input type="text" onclick="SelolID(64)">
+                            <input type="text" onclick="SelolID(65)"><input type="text" onclick="SelolID(66)"><input type="text" onclick="SelolID(67)"><input type="text" onclick="SelolID(68)"><input type="text" onclick="SelolID(69)">
+                            <input type="text" onclick="SelolID(70)"><input type="text" onclick="SelolID(71)"><input type="text" onclick="SelolID(72)"><input type="text" onclick="SelolID(73)"><input type="text" onclick="SelolID(74)">
+                            <input type="text" onclick="SelolID(75)"><input type="text" onclick="SelolID(76)"><input type="text" onclick="SelolID(77)"><input type="text" onclick="SelolID(78)"><input type="text" onclick="SelolID(79)">
+                            <input type="text" onclick="SelolID(80)"><input type="text" onclick="SelolID(81)"><input type="text" onclick="SelolID(82)"><input type="text" onclick="SelolID(83)"><input type="text" onclick="SelolID(84)">
+                            <input type="text" onclick="SelolID(85)"><input type="text" onclick="SelolID(86)"><input type="text" onclick="SelolID(87)"><input type="text" onclick="SelolID(88)"><input type="text" onclick="SelolID(89)">
+                            <input type="text" onclick="SelolID(90)"><input type="text" onclick="SelolID(91)"><input type="text" onclick="SelolID(92)"><input type="text" onclick="SelolID(93)"><input type="text" onclick="SelolID(94)">
+                            <input type="text" onclick="SelolID(95)"><input type="text" onclick="SelolID(96)"><input type="text" onclick="SelolID(97)"><input type="text" onclick="SelolID(98)"><input type="text" onclick="SelolID(99)">
+                            <input type="text" onclick="SelolID(100)"><input type="text" onclick="SelolID(101)"><input type="text" onclick="SelolID(102)"><input type="text" onclick="SelolID(103)"><input type="text" onclick="SelolID(104)">
+                            <input type="text" onclick="SelolID(105)"><input type="text" onclick="SelolID(106)"><input type="text" onclick="SelolID(107)"><input type="text" onclick="SelolID(108)"><input type="text" onclick="SelolID(109)">
+                            <input type="text" onclick="SelolID(110)"><input type="text" onclick="SelolID(111)"><input type="text" onclick="SelolID(112)"><input type="text" onclick="SelolID(113)"><input type="text" onclick="SelolID(114)">
+                            <input type="text" onclick="SelolID(115)"><input type="text" onclick="SelolID(116)"><input type="text" onclick="SelolID(117)"><input type="text" onclick="SelolID(118)"><input type="text" onclick="SelolID(119)">
+                            <input type="text" onclick="SelolID(120)"><input type="text" onclick="SelolID(121)"><input type="text" onclick="SelolID(122)"><input type="text" onclick="SelolID(123)"><input type="text" onclick="SelolID(124)">
+                            <input type="text" onclick="SelolID(125)"><input type="text" onclick="SelolID(126)"><input type="text" onclick="SelolID(127)"><input type="text" onclick="SelolID(128)"><input type="text" onclick="SelolID(129)">
+                            <input type="text" onclick="SelolID(130)"><input type="text" onclick="SelolID(131)"><input type="text" onclick="SelolID(132)"><input type="text" onclick="SelolID(133)"><input type="text" onclick="SelolID(134)">
+                            <input type="text" onclick="SelolID(135)"><input type="text" onclick="SelolID(136)"><input type="text" onclick="SelolID(137)"><input type="text" onclick="SelolID(138)"><input type="text" onclick="SelolID(139)">
+                            <input type="text" onclick="SelolID(140)"><input type="text" onclick="SelolID(141)"><input type="text" onclick="SelolID(142)"><input type="text" onclick="SelolID(143)"><input type="text" onclick="SelolID(144)">
+                            <input type="text" onclick="SelolID(145)"><input type="text" onclick="SelolID(146)"><input type="text" onclick="SelolID(147)"><input type="text" onclick="SelolID(148)"><input type="text" onclick="SelolID(149)">
+                            <input type="text" onclick="SelolID(150)"><input type="text" onclick="SelolID(151)"><input type="text" onclick="SelolID(152)"><input type="text" onclick="SelolID(153)"><input type="text" onclick="SelolID(154)">
+                            <input type="text" onclick="SelolID(155)"><input type="text" onclick="SelolID(156)"><input type="text" onclick="SelolID(157)"><input type="text" onclick="SelolID(158)"><input type="text" onclick="SelolID(159)">
+                            <input type="text" onclick="SelolID(160)"><input type="text" onclick="SelolID(161)"><input type="text" onclick="SelolID(162)"><input type="text" onclick="SelolID(163)"><input type="text" onclick="SelolID(164)">
+                            <input type="text" onclick="SelolID(165)"><input type="text" onclick="SelolID(166)"><input type="text" onclick="SelolID(167)"><input type="text" onclick="SelolID(168)"><input type="text" onclick="SelolID(169)">
+                            <input type="text" onclick="SelolID(170)"><input type="text" onclick="SelolID(171)"><input type="text" onclick="SelolID(172)"><input type="text" onclick="SelolID(173)"><input type="text" onclick="SelolID(174)">
+                            <input type="text" onclick="SelolID(175)"><input type="text" onclick="SelolID(176)"><input type="text" onclick="SelolID(177)"><input type="text" onclick="SelolID(178)"><input type="text" onclick="SelolID(179)">
+                            <input type="text" onclick="SelolID(180)"><input type="text" onclick="SelolID(181)"><input type="text" onclick="SelolID(182)"><input type="text" onclick="SelolID(183)"><input type="text" onclick="SelolID(184)">
+                            <input type="text" onclick="SelolID(185)"><input type="text" onclick="SelolID(186)"><input type="text" onclick="SelolID(187)"><input type="text" onclick="SelolID(188)"><input type="text" onclick="SelolID(189)">
+                            <input type="text" onclick="SelolID(190)"><input type="text" onclick="SelolID(191)"><input type="text" onclick="SelolID(192)"><input type="text" onclick="SelolID(193)"><input type="text" onclick="SelolID(194)">
+                            <input type="text" onclick="SelolID(195)"><input type="text" onclick="SelolID(196)"><input type="text" onclick="SelolID(197)"><input type="text" onclick="SelolID(198)"><input type="text" onclick="SelolID(199)">
+                            <input type="text" onclick="SelolID(200)"><input type="text" onclick="SelolID(201)"><input type="text" onclick="SelolID(202)"><input type="text" onclick="SelolID(203)"><input type="text" onclick="SelolID(204)">
+                            <input type="text" onclick="SelolID(205)"><input type="text" onclick="SelolID(206)"><input type="text" onclick="SelolID(207)"><input type="text" onclick="SelolID(208)"><input type="text" onclick="SelolID(209)">
+                        </table>
+                        
+                        </div> 
+                        <ul id="RightClick">
+                            <li id="TextType"><span id="AmountFontType">Tahoma</span>
+                                <ul id="TextTypeMenu" class="Acardeon">
+                                    <li id="Tahoma">Tahoma</li>
+                                    <li id="Mitra">Mitra</li>
+                                    <li id="Iransans">Iransans</li>
+                                    <li id="Kokab">Kokab</li>
+                                </ul>
+                            </li>
+                            <li id="NumberOfText"><span id="AmountSize">12</span>
+                                <ul id="TextSizeMenu" class="Acardeon">
+                                    <li id="Amount12">12</li>
+                                    <li id="Amount16">16</li>
+                                    <li id="Amount20">20</li>
+                                </ul>
+                            </li>
+                            <li id="IncreaseFontSize"></li>
+                            <li id="DecreaseFontSize"></li>
+                            <li id="CurrencyType">
+                                <ul id="CurrencyTypeMenu" class="Acardeon">
+                                    <li>$ English (United States)</li>
+                                    <li>£ English (United Kingdom)</li>
+                                    <li>€ Euro (€ 123)</li>
+                                    <li>¥ Chinese (PRC)</li>
+                                    <li>CHF French (Switzerland)</li>
+                                    <hr>
+                                    <li>More Accounting Formats...</li>
+                                </ul>
+                            </li>
+                            <li id="TypeDarsad"></li>
+                            <li id="TypeVirgol"></li>
+                            <li id="TypeMerge"></li>
+                            <li id="FontBold"></li>
+                            <li id="FontUnderLine"></li>
+                            <li id="FontCenter"></li>
+                            <li id="BgFontColor">
+                                <ul id="BgFontColorMenu" class="Acardeon">
+                                    <li id="BgRed"></li>
+                                    <li id="BgSefid"></li>
+                                    <li id="BgGreen"></li>
+                                </ul>
+                            </li>
+                            <li id="ColorFont">
+                                <ul id="ColorFontMenu" class="Acardeon">
+                                    <li id="FontRed"></li>
+                                    <li id="FontBlack"></li>
+                                    <li id="FontGreen"></li>
+                                </ul>
+                            </li>
+                            <!-- <li id="FontBorder">
+                                <ul id="FontBorderMenu" class="Acardeon">
+                                    <li>Bottom Border</li>
+                                    <li>Top Border</li>
+                                    <li>Left Border</li>
+                                    <li>Right Border</li>
+                                    <li>All Border</li>
+                                </ul> -->
+                            </li>
+                            <li id="IncreaseDecimal"></li>
+                            <li id="DecreaseDecimal"></li>
+                            <li id="FormatText"></li>
+                        </ul>
+                    </div>
+                    <div id="FooterTop">
+                        <div id="NewSheet">Sheet1</div>
+                        <div id="Mosbat"></div>
+                    </div>
+                    <div id="FooterBottom">
+                        <h5 id="Ready">Ready</h5>
+                        <div class="range">
+                            <span id="BoxValue">
+                                <span id="rangeValue">?%</span>
+                            </span>
+                            <input type="range" value="0" min="0" max="283"
+                            onmousemove="rangeValue(this.value)"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+<script> 
+    blankWorkbook.onclick = movePage;
+    ShowFileTab.onclick = Show;
+    const SelolWidth = document.querySelectorAll("#Selol > input");
+    const SelolNomber = document.querySelectorAll("#NumberOfSelol > li");
+    const SelolWord = document.querySelectorAll("#word > li");
+    function rangeValue(value){
+        document.getElementById("rangeValue").innerHTML = value + "%";
+        for(i=0; i < SelolWidth.length; i++){
+            SelolWidth[i].style.width = "clamp(100px," + value + "px,283px)";
+            SelolWidth[i].style.height = "clamp(25px," + value + "px,97px)";
+        }
+        for(x=0; x < SelolNomber.length; x++){
+            SelolNomber[x].style.width = "clamp(30px," + value + "px,73px)";
+            SelolNomber[x].style.height = "clamp(27.9px," + value + "px,100.2px)";
+            SelolNomber[x].style.fontSize = "clamp(16px," + value + "px,60px)";
+        }
+        for(y=0; y < SelolWord.length; y++){
+            SelolWord[y].style.width = "clamp(100.833px," + value + "px,283px)";
+            SelectAllSelol.style.width = "clamp(30px," + value + "px,73px)";
+        }
+    }
+    TabHome.click();
+    copy.onclick = function(){SubMenu(CopyAcardeon,0)};
+    CopyAcardeon.onmouseover = function(){OpenSubMenu(CopyAcardeon,0)};
+    copy.onmouseout = function(){CloseSubMenu(CopyAcardeon,0)};
+    Find.onclick = function(){SubMenu(FindAcardeon,1)};
+    FindAcardeon.onmouseover = function(){OpenSubMenu(FindAcardeon,1)};
+    Find.onmouseout = function(){CloseSubMenu(FindAcardeon,1)};
+    Sort.onclick = function(){SubMenu(SortAcardeon,2)};
+    SortAcardeon.onmouseover = function(){OpenSubMenu(SortAcardeon,2)};
+    Sort.onmouseout = function(){CloseSubMenu(SortAcardeon,2)};
+    Autosum.onclick = function(){SubMenu(AutosumAcardeon,3)};
+    AutosumAcardeon.onmouseover = function(){OpenSubMenu(AutosumAcardeon,3)};
+    Autosum.onmouseout = function(){CloseSubMenu(AutosumAcardeon,3)};
+    Fill.onclick = function(){SubMenu(FillAcardeon,4)};
+    FillAcardeon.onmouseover = function(){OpenSubMenu(FillAcardeon,4)};
+    Fill.onmouseout = function(){CloseSubMenu(FillAcardeon,4)};
+    Clear.onclick = function(){SubMenu(ClearAcardeon,5)};
+    ClearAcardeon.onmouseover = function(){OpenSubMenu(ClearAcardeon,5)};
+    Clear.onmouseout = function(){CloseSubMenu(ClearAcardeon,5)};
+    InsertCell.onclick = function(){SubMenu(InsertCellAcardeon,6)};
+    InsertCellAcardeon.onmouseover = function(){OpenSubMenu(InsertCellAcardeon,6)};
+    InsertCell.onmouseout = function(){CloseSubMenu(InsertCellAcardeon,6)};
+    DeleteCell.onclick = function(){SubMenu(DeleteCellAcardeon,7)};
+    DeleteCellAcardeon.onmouseover = function(){OpenSubMenu(DeleteCellAcardeon,7)};
+    DeleteCell.onmouseout = function(){CloseSubMenu(DeleteCellAcardeon,7)};
+    FormatCell.onclick = function(){SubMenu(FormatCellAcardeon,8)};
+    FormatCellAcardeon.onmouseover = function(){OpenSubMenu(FormatCellAcardeon,8)};
+    FormatCell.onmouseout = function(){CloseSubMenu(FormatCellAcardeon,8)};
+    ForamtTable.onclick = function(){SubMenu(FormatTableAcardeon,9)};
+    FormatTableAcardeon.onmouseover = function(){OpenSubMenu(FormatTableAcardeon,9)};
+    ForamtTable.onmouseout = function(){CloseSubMenu(FormatTableAcardeon,9)};
+    Conditional.onclick = function(){SubMenu(ConditionalAcardeon,10)};
+    ConditionalAcardeon.onmouseover = function(){OpenSubMenu(ConditionalAcardeon,10)};
+    Conditional.onmouseout = function(){CloseSubMenu(ConditionalAcardeon,10)};
+    NumberFormat.onclick = function(){SubMenu(NumberFormatAcardeon,11)};
+    NumberFormatAcardeon.onmouseover = function(){OpenSubMenu(NumberFormatAcardeon,11)};
+    NumberFormat.onmouseout = function(){CloseSubMenu(NumberFormatAcardeon,11)};
+    Currency.onclick = function(){SubMenu(CurrencyAcardeon,11)};
+    CurrencyAcardeon.onmouseover = function(){OpenSubMenu(CurrencyAcardeon,11)};
+    Currency.onmouseout = function(){CloseSubMenu(CurrencyAcardeon,11)};
+    Merge.onclick = function(){SubMenu(MergeAcardeon,12)};
+    MergeAcardeon.onmouseover = function(){OpenSubMenu(MergeAcardeon,12)};
+    Merge.onmouseout = function(){CloseSubMenu(MergeAcardeon,12)};
+    LTR.onclick = function(){SubMenu(LTRAcardeon,13)};
+    LTRAcardeon.onmouseover = function(){OpenSubMenu(LTRAcardeon,13)};
+    LTR.onmouseout = function(){CloseSubMenu(LTRAcardeon,13)};
+    Rotate.onclick = function(){SubMenu(RotateAcardeon,14)};
+    RotateAcardeon.onmouseover = function(){OpenSubMenu(RotateAcardeon,14)};
+    Rotate.onmouseout = function(){CloseSubMenu(RotateAcardeon,14)};
+    fontBorder.onclick = function(){SubMenu(BorderAcardeon,15)};
+    BorderAcardeon.onmouseover = function(){OpenSubMenu(BorderAcardeon,15)};
+    fontBorder.onmouseout = function(){CloseSubMenu(BorderAcardeon,15)};
+    FontFamily.onclick = function(){SubMenu(FontFamilyAcardeon,16)};
+    FontFamilyAcardeon.onmouseover = function(){OpenSubMenu(FontFamilyAcardeon,16)};
+    FontFamily.onmouseout = function(){CloseSubMenu(FontFamilyAcardeon,16)};
+    FontSize.onclick = function(){SubMenu(FontSizeAcardeon,17)};
+    FontSizeAcardeon.onmouseover = function(){OpenSubMenu(FontSizeAcardeon,17)};
+    FontSize.onmouseout = function(){CloseSubMenu(FontSizeAcardeon,17)};
+    BgColor.onclick = function(){SubMenu(BgColorAcardeon,18)};
+    BgColorAcardeon.onmouseover = function(){OpenSubMenu(BgColorAcardeon,18)};
+    BgColor.onmouseout = function(){CloseSubMenu(BgColorAcardeon,18)};
+    TextColor.onclick = function(){SubMenu(TextColorAcardeon,18)};
+    TextColorAcardeon.onmouseover = function(){OpenSubMenu(TextColorAcardeon,18)};
+    TextColor.onmouseout = function(){CloseSubMenu(TextColorAcardeon,18)};
+    PrinterType.onclick = function(){SubMenu(PrinterTypeAcardeon,19)};
+    PrinterTypeAcardeon.onmouseover = function(){OpenSubMenu(PrinterTypeAcardeon,19)};
+    PrinterType.onmouseout = function(){CloseSubMenu(PrinterTypeAcardeon,19)};
+    PrinterSetting1.onclick = function(){SubMenu(PrinterSettingAcardeon1,20)};
+    PrinterSettingAcardeon1.onmouseover = function(){OpenSubMenu(PrinterSettingAcardeon1,20)};
+    PrinterSetting1.onmouseout = function(){CloseSubMenu(PrinterSettingAcardeon1,20)};
+    PrinterSetting2.onclick = function(){SubMenu(PrinterSettingAcardeon2,21)};
+    PrinterSettingAcardeon2.onmouseover = function(){OpenSubMenu(PrinterSettingAcardeon2,21)};
+    PrinterSetting2.onmouseout = function(){CloseSubMenu(PrinterSettingAcardeon2,21)};
+    PrinterSetting3.onclick = function(){SubMenu(PrinterSettingAcardeon3,22)};
+    PrinterSettingAcardeon3.onmouseover = function(){OpenSubMenu(PrinterSettingAcardeon3,22)};
+    PrinterSetting3.onmouseout = function(){CloseSubMenu(PrinterSettingAcardeon3,22)};
+    PrinterSetting4.onclick = function(){SubMenu(PrinterSettingAcardeon4,23)};
+    PrinterSettingAcardeon4.onmouseover = function(){OpenSubMenu(PrinterSettingAcardeon4,23)};
+    PrinterSetting4.onmouseout = function(){CloseSubMenu(PrinterSettingAcardeon4,23)};
+    PrinterSetting5.onclick = function(){SubMenu(PrinterSettingAcardeon5,24)};
+    PrinterSettingAcardeon5.onmouseover = function(){OpenSubMenu(PrinterSettingAcardeon5,24)};
+    PrinterSetting5.onmouseout = function(){CloseSubMenu(PrinterSettingAcardeon5,24)};
+    PrinterSetting6.onclick = function(){SubMenu(PrinterSettingAcardeon6,25)};
+    PrinterSettingAcardeon6.onmouseover = function(){OpenSubMenu(PrinterSettingAcardeon6,25)};
+    PrinterSetting6.onmouseout = function(){CloseSubMenu(PrinterSettingAcardeon6,25)};
+    ChangeTheme.onclick = function(){SubMenu(ThemeType,26)};
+    ThemeType.onmouseover = function(){OpenSubMenu(ThemeType,26)};
+    ChangeTheme.onmouseout = function(){CloseSubMenu(ThemeType,26)};
+    TextType.onclick = function(){SubMenu(TextTypeMenu,27)};
+    TextTypeMenu.onmouseover = function(){OpenSubMenu(TextTypeMenu,27)};
+    TextType.onmouseout = function(){CloseSubMenu(TextTypeMenu,27)};
+    NumberOfText.onclick = function(){SubMenu(TextSizeMenu,28)};
+    TextSizeMenu.onmouseover = function(){OpenSubMenu(TextSizeMenu,28)};
+    NumberOfText.onmouseout = function(){CloseSubMenu(TextSizeMenu,28)};
+    CurrencyType.onclick = function(){SubMenu(CurrencyTypeMenu,29)};
+    CurrencyTypeMenu.onmouseover = function(){OpenSubMenu(CurrencyTypeMenu,29)};
+    CurrencyType.onmouseout = function(){CloseSubMenu(CurrencyTypeMenu,29)};
+    BgFontColor.onclick = function(){SubMenu(BgFontColorMenu,30)};
+    BgFontColorMenu.onmouseover = function(){OpenSubMenu(BgFontColorMenu,30)};
+    BgFontColor.onmouseout = function(){CloseSubMenu(BgFontColorMenu,30)};
+    ColorFont.onclick = function(){SubMenu(ColorFontMenu,31)};
+    ColorFontMenu.onmouseover = function(){OpenSubMenu(ColorFontMenu,31)};
+    ColorFont.onmouseout = function(){CloseSubMenu(ColorFontMenu,31)};
+    Shape.onclick = function(){SubMenu(ShapeMenu,32)};
+    ShapeMenu.onmouseover = function(){OpenSubMenu(ShapeMenu,32)};
+    Shape.onmouseout = function(){CloseSubMenu(ShapeMenu,32)};
+    MyAdd.onclick = function(){SubMenu(MyAddMenu,33)};
+    MyAddMenu.onmouseover = function(){OpenSubMenu(MyAddMenu,33)};
+    MyAdd.onmouseout = function(){CloseSubMenu(MyAddMenu,33)};
+    PivotChart.onclick = function(){SubMenu(PivotChartMenu,34)};
+    PivotChartMenu.onmouseover = function(){OpenSubMenu(PivotChartMenu,34)};
+    PivotChart.onmouseout = function(){CloseSubMenu(PivotChartMenu,34)};
+    ThreeDMap.onclick = function(){SubMenu(ThreeDMapMenu,35)};
+    ThreeDMapMenu.onmouseover = function(){OpenSubMenu(ThreeDMapMenu,35)};
+    ThreeDMap.onmouseout = function(){CloseSubMenu(ThreeDMapMenu,35)};
+    WordArt.onclick = function(){SubMenu(WordArtMenu,36)};
+    WordArtMenu.onmouseover = function(){OpenSubMenu(WordArtMenu,36)};
+    WordArt.onmouseout = function(){CloseSubMenu(WordArtMenu,36)};
+    Signature.onclick = function(){SubMenu(SignatureMenu,37)};
+    SignatureMenu.onmouseover = function(){OpenSubMenu(SignatureMenu,37)};
+    Signature.onmouseout = function(){CloseSubMenu(SignatureMenu,37)};
+    Equation.onclick = function(){SubMenu(EquationMenu,38)};
+    EquationMenu.onmouseover = function(){OpenSubMenu(EquationMenu,38)};
+    Equation.onmouseout = function(){CloseSubMenu(EquationMenu,38)};
+    ColumnChart.onclick = function(){SubMenu(ColumnChartMenu,39)};
+    ColumnChartMenu.onmouseover = function(){OpenSubMenu(ColumnChartMenu,39)};
+    ColumnChart.onmouseout = function(){CloseSubMenu(ColumnChartMenu,39)};
+    HierarchyChart.onclick = function(){SubMenu(HierarchyChartMenu,40)};
+    HierarchyChartMenu.onmouseover = function(){OpenSubMenu(HierarchyChartMenu,40)};
+    HierarchyChart.onmouseout = function(){CloseSubMenu(HierarchyChartMenu,40)};
+    PrintArea.onclick = function(){SubMenu(PrintAreaMenu,41)};
+    PrintAreaMenu.onmouseover = function(){OpenSubMenu(PrintAreaMenu,41)};
+    PrintArea.onmouseout = function(){CloseSubMenu(PrintAreaMenu,41)};
+    Breaks.onclick = function(){SubMenu(BreaksMenu,42)};
+    BreaksMenu.onmouseover = function(){OpenSubMenu(BreaksMenu,42)};
+    Breaks.onmouseout = function(){CloseSubMenu(BreaksMenu,42)};
+    ThemeColor.onclick = function(){SubMenu(ThemeColorMenu,43)};
+    ThemeColorMenu.onmouseover = function(){OpenSubMenu(ThemeColorMenu,43)};
+    ThemeColor.onmouseout = function(){CloseSubMenu(ThemeColorMenu,43)};
+    ThemeType2.onclick = function(){SubMenu(ThemeType2Menu,44)};
+    ThemeType2Menu.onmouseover = function(){OpenSubMenu(ThemeType2Menu,44)};
+    ThemeType2.onmouseout = function(){CloseSubMenu(ThemeType2Menu,44)};
+    ThemeFont.onclick = function(){SubMenu(ThemeFontMenu,45)};
+    ThemeFontMenu.onmouseover = function(){OpenSubMenu(ThemeFontMenu,45)};
+    ThemeFont.onmouseout = function(){CloseSubMenu(ThemeFontMenu,45)};
+    ThemeEffect.onclick = function(){SubMenu(ThemeEffectMenu,46)};
+    ThemeEffectMenu.onmouseover = function(){OpenSubMenu(ThemeEffectMenu,46)};
+    ThemeEffect.onmouseout = function(){CloseSubMenu(ThemeEffectMenu,46)};
+    Margins.onclick = function(){SubMenu(MarginsMenu,47)};
+    MarginsMenu.onmouseover = function(){OpenSubMenu(MarginsMenu,47)};
+    Margins.onmouseout = function(){CloseSubMenu(MarginsMenu,47)};
+    Orientation.onclick = function(){SubMenu(OrientationMenu,48)};
+    OrientationMenu.onmouseover = function(){OpenSubMenu(OrientationMenu,48)};
+    Orientation.onmouseout = function(){CloseSubMenu(OrientationMenu,48)};
+    Size.onclick = function(){SubMenu(SizeMenu,49)};
+    SizeMenu.onmouseover = function(){OpenSubMenu(SizeMenu,49)};
+    Size.onmouseout = function(){CloseSubMenu(SizeMenu,49)};
+    WidthWorkbook.onclick = function(){SubMenu(WidthMenu,50)};
+    WidthMenu.onmouseover = function(){OpenSubMenu(WidthMenu,50)};
+    WidthWorkbook.onmouseout = function(){CloseSubMenu(WidthMenu,50)};
+    HeightWorkbook.onclick = function(){SubMenu(HeightMenu,51)};
+    HeightMenu.onmouseover = function(){OpenSubMenu(HeightMenu,51)};
+    HeightWorkbook.onmouseout = function(){CloseSubMenu(HeightMenu,51)};
+    Bring.onclick = function(){SubMenu(BringMenu,52)};
+    BringMenu.onmouseover = function(){OpenSubMenu(BringMenu,52)};
+    Bring.onmouseout = function(){CloseSubMenu(BringMenu,52)};
+    Send.onclick = function(){SubMenu(SendMenu,53)};
+    SendMenu.onmouseover = function(){OpenSubMenu(SendMenu,53)};
+    Send.onmouseout = function(){CloseSubMenu(SendMenu,53)};
+    AlignObject.onclick = function(){SubMenu(AlignMenu,54)};
+    AlignMenu.onmouseover = function(){OpenSubMenu(AlignMenu,54)};
+    AlignObject.onmouseout = function(){CloseSubMenu(AlignMenu,54)};
+    autoSum2.onclick = function(){SubMenu(autoSum2Menu,55)};
+    autoSum2Menu.onmouseover = function(){OpenSubMenu(autoSum2Menu,55)};
+    autoSum2.onmouseout = function(){CloseSubMenu(autoSum2Menu,55)};
+    recentlyUsed.onclick = function(){SubMenu(recentlyUsedMenu,56)};
+    recentlyUsedMenu.onmouseover = function(){OpenSubMenu(recentlyUsedMenu,56)};
+    recentlyUsed.onmouseout = function(){CloseSubMenu(recentlyUsedMenu,56)};
+    financial.onclick = function(){SubMenu(financialMenu,57)};
+    financialMenu.onmouseover = function(){OpenSubMenu(financialMenu,57)};
+    financial.onmouseout = function(){CloseSubMenu(financialMenu,57)};
+    logical.onclick = function(){SubMenu(logicalMenu,58)};
+    logicalMenu.onmouseover = function(){OpenSubMenu(logicalMenu,58)};
+    logical.onmouseout = function(){CloseSubMenu(logicalMenu,58)};
+    functionText.onclick = function(){SubMenu(functionTextMenu,59)};
+    functionTextMenu.onmouseover = function(){OpenSubMenu(functionTextMenu,59)};
+    functionText.onmouseout = function(){CloseSubMenu(functionTextMenu,59)};
+    functionDate.onclick = function(){SubMenu(functionDateMenu,60)};
+    functionDateMenu.onmouseover = function(){OpenSubMenu(functionDateMenu,60)};
+    functionDate.onmouseout = function(){CloseSubMenu(functionDateMenu,60)};
+    lookup.onclick = function(){SubMenu(lookupMenu,61)};
+    lookupMenu.onmouseover = function(){OpenSubMenu(lookupMenu,61)};
+    lookup.onmouseout = function(){CloseSubMenu(lookupMenu,61)};
+    math.onclick = function(){SubMenu(mathMenu,62)};
+    mathMenu.onmouseover = function(){OpenSubMenu(mathMenu,62)};
+    math.onmouseout = function(){CloseSubMenu(mathMenu,62)};
+    more.onclick = function(){SubMenu(moreMenu,63)};
+    moreMenu.onmouseover = function(){OpenSubMenu(moreMenu,63)};
+    more.onmouseout = function(){CloseSubMenu(moreMenu,63)};
+    DefineName.onclick = function(){SubMenu(DefineNameMenu,64)};
+    DefineNameMenu.onmouseover = function(){OpenSubMenu(DefineNameMenu,64)};
+    DefineName.onmouseout = function(){CloseSubMenu(DefineNameMenu,64)};
+    Error2.onclick = function(){SubMenu(ErrorMenu,66)};
+    ErrorMenu.onmouseover = function(){OpenSubMenu(ErrorMenu,65)};
+    Error2.onmouseout = function(){CloseSubMenu(ErrorMenu,65)};
+    RemoveArrow.onclick = function(){SubMenu(RemoveArrowMenu,66)};
+    RemoveArrowMenu.onmouseover = function(){OpenSubMenu(RemoveArrowMenu,66)};
+    RemoveArrow.onmouseout = function(){CloseSubMenu(RemoveArrowMenu,66)};
+    CalculationLeft.onclick = function(){SubMenu(CalculationLeftMenu,67)};
+    CalculationLeftMenu.onmouseover = function(){OpenSubMenu(CalculationLeftMenu,67)};
+    CalculationLeft.onmouseout = function(){CloseSubMenu(CalculationLeftMenu,67)};
+    FromSources.onclick = function(){SubMenu(FromSourcesMenu,68)};
+    FromSourcesMenu.onmouseover = function(){OpenSubMenu(FromSourcesMenu,68)};
+    FromSources.onmouseout = function(){CloseSubMenu(FromSourcesMenu,68)};
+    Query.onclick = function(){SubMenu(QueryMenu,69)};
+    QueryMenu.onmouseover = function(){OpenSubMenu(QueryMenu,69)};
+    Query.onmouseout = function(){CloseSubMenu(QueryMenu,69)};
+    RefreshAll.onclick = function(){SubMenu(RefreshAllMenu,70)};
+    RefreshAllMenu.onmouseover = function(){OpenSubMenu(RefreshAllMenu,70)};
+    RefreshAll.onmouseout = function(){CloseSubMenu(RefreshAllMenu,70)};
+    Validation.onclick = function(){SubMenu(ValidationMenu,71)};
+    ValidationMenu.onmouseover = function(){OpenSubMenu(ValidationMenu,71)};
+    Validation.onmouseout = function(){CloseSubMenu(ValidationMenu,71)};
+    Analysis.onclick = function(){SubMenu(AnalysisMenu,72)};
+    AnalysisMenu.onmouseover = function(){OpenSubMenu(AnalysisMenu,72)};
+    Analysis.onmouseout = function(){CloseSubMenu(AnalysisMenu,72)};
+    GroupOutline.onclick = function(){SubMenu(GroupOutlineMenu,73)};
+    GroupOutlineMenu.onmouseover = function(){OpenSubMenu(GroupOutlineMenu,73)};
+    GroupOutline.onmouseout = function(){CloseSubMenu(GroupOutlineMenu,73)};
+    Ungroup.onclick = function(){SubMenu(UngroupMenu,74)};
+    UngroupMenu.onmouseover = function(){OpenSubMenu(UngroupMenu,74)};
+    Ungroup.onmouseout = function(){CloseSubMenu(UngroupMenu,74)};
+    Track.onclick = function(){SubMenu(TrackMenu,75)};
+    TrackMenu.onmouseover = function(){OpenSubMenu(TrackMenu,75)};
+    Track.onmouseout = function(){CloseSubMenu(TrackMenu,75)};
+    Macros.onclick = function(){SubMenu(MacrosMenu,75)};
+    MacrosMenu.onmouseover = function(){OpenSubMenu(MacrosMenu,75)};
+    Macros.onmouseout = function(){CloseSubMenu(MacrosMenu,75)};
+    Switch.onclick = function(){SubMenu(SwitchMenu,76)};
+    SwitchMenu.onmouseover = function(){OpenSubMenu(SwitchMenu,76)};
+    Switch.onmouseout = function(){CloseSubMenu(SwitchMenu,76)};
+    Freeze.onclick = function(){SubMenu(FreezeMenu,77)};
+    FreezeMenu.onmouseover = function(){OpenSubMenu(FreezeMenu,77)};
+    Freeze.onmouseout = function(){CloseSubMenu(FreezeMenu,77)};
+    StockChart.onclick = function(){SubMenu(StockChartMenu,78)};
+    StockChartMenu.onmouseover = function(){OpenSubMenu(StockChartMenu,78)};
+    StockChart.onmouseout = function(){CloseSubMenu(StockChartMenu,78)};
+    LineChart.onclick = function(){SubMenu(LineChartMenu,79)};
+    LineChartMenu.onmouseover = function(){OpenSubMenu(LineChartMenu,79)};
+    LineChart.onmouseout = function(){CloseSubMenu(LineChartMenu,79)};
+    StaticChart.onclick = function(){SubMenu(StaticChartMenu,80)};
+    StaticChartMenu.onmouseover = function(){OpenSubMenu(StaticChartMenu,80)};
+    StaticChart.onmouseout = function(){CloseSubMenu(StaticChartMenu,80)};
+    ComboChart.onclick = function(){SubMenu(ComboChartMenu,81)};
+    ComboChartMenu.onmouseover = function(){OpenSubMenu(ComboChartMenu,81)};
+    ComboChart.onmouseout = function(){CloseSubMenu(ComboChartMenu,81)};
+    PieChart.onclick = function(){SubMenu(PieChartMenu,82)};
+    PieChartMenu.onmouseover = function(){OpenSubMenu(PieChartMenu,82)};
+    PieChart.onmouseout = function(){CloseSubMenu(PieChartMenu,82)};
+    ScatterChart.onclick = function(){SubMenu(ScatterChartMenu,83)};
+    ScatterChartMenu.onmouseover = function(){OpenSubMenu(ScatterChartMenu,83)};
+    ScatterChart.onmouseout = function(){CloseSubMenu(ScatterChartMenu,83)};
+    RadarChart.onclick = function(){SubMenu(RadarChartMenu,84)};
+    RadarChartMenu.onmouseover = function(){OpenSubMenu(RadarChartMenu,84)};
+    RadarChart.onmouseout = function(){CloseSubMenu(RadarChartMenu,84)};
+    Dark.onclick = DarkMood;
+    Light.onclick = LightMood;
+    CloseFileTab.onclick = Hidden;
+    Selol.oncontextmenu = Click;
+    Selol.onclick = CloseRightClick;
+    Amount12.onclick = function(){ 
+        AmountSize.innerHTML = "12" ; 
+        Selol.style.fontSize = "12px";
+    }
+    Amount16.onclick = function(){ 
+        AmountSize.innerHTML = "16" ; 
+        Selol.style.fontSize = "16px";
+    }
+    Amount20.onclick = function(){ 
+        AmountSize.innerHTML = "20" ; 
+        Selol.style.fontSize = "20px";
+    }
+    Tahoma.onclick = function(){
+        AmountFontType.innerHTML = "Tahoma";
+        Selol.style.fontFamily = "tahoma";
+    }
+    Mitra.onclick = function(){
+        AmountFontType.innerHTML = "Mitra";
+        Selol.style.fontFamily = "Mitra";
+    }
+    Iransans.onclick = function(){
+        AmountFontType.innerHTML = "Iransans";
+        Selol.style.fontFamily = "Iransans";
+    }
+    Kokab.onclick = function(){
+        AmountFontType.innerHTML = "Kokab";
+        Selol.style.fontFamily = "Kokab";
+    }
+    var MemuryOFBold = 0;
+    FontBold.onclick =function(){
+        if(MemuryOFBold == 0){
+            Selol.style.fontWeight = "bold";
+            MemuryOFBold = 1;
+            FontBold.style.boxShadow = "2px 2px 5px #000 inset";
+        }
+        else if(MemuryOFBold == 1){
+            Selol.style.fontWeight = "normal";
+            MemuryOFBold = 0;
+            FontBold.style.boxShadow = "none";
+        }
+    }
+    var MemuryOFUnderLine = 0;
+    FontUnderLine.onclick =function(){
+        if(MemuryOFUnderLine == 0){
+            Selol.style.textDecoration = "underLine";
+            MemuryOFUnderLine = 1;
+            FontUnderLine.style.boxShadow = "2px 2px 5px #000 inset";
+        }
+        else if(MemuryOFUnderLine == 1){
+            Selol.style.textDecoration = "none";
+            MemuryOFUnderLine = 0;
+            FontUnderLine.style.boxShadow = "none";
+        }
+    }
+    var MemuryOFTextAlign = 0;
+    FontCenter.onclick =function(){
+        if(MemuryOFTextAlign == 0){
+            Selol.style.textAlign = "center";
+            MemuryOFTextAlign = 1;
+            FontCenter.style.boxShadow = "2px 2px 5px #000 inset";
+        }
+        else if(MemuryOFTextAlign == 1){
+            Selol.style.textAlign = "left";
+            MemuryOFTextAlign = 0;
+            FontCenter.style.boxShadow = "none";
+        }
+    }
+    BgRed.onclick = function(){
+        Selol.style.backgroundColor = "red";
+        Selol.style.borderColor = "yellow";
+    }
+    BgSefid.onclick = function(){
+        Selol.style.backgroundColor = "#fff";
+        Selol.style.borderColor = "#ccc";
+    }
+    BgGreen.onclick = function(){
+        Selol.style.backgroundColor = "green";
+        Selol.style.borderColor = "#000";
+    }
+    FontRed.onclick = function(){
+        Selol.style.color = "red";
+    }
+    FontBlack.onclick = function(){
+        Selol.style.color = "#000";
+    }
+    FontGreen.onclick = function(){
+        Selol.style.color = "green";
+    }
+    // FormatText.onclick = function(){
+    //     SelolWidth[35].backgroundColor = "red";
+    // }
+</script>
+</body>
+</html>

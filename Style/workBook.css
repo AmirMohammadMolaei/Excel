@@ -1,0 +1,1597 @@
+#workBook{ width: 100%; height: 100%;  }
+#workBook > .header{ width: 100%; position: relative; }
+#workBook > .header > #closeTab{
+    width: 100%;
+    height: 40px;
+    background-color: #30714D;
+}
+/* Menu */
+ .menu{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #30714D;
+    font-size: 12px;
+    color: #fff;
+}
+.menu > li{line-height: 20px; cursor: pointer;}
+#workBook > .header > .menu > li:nth-child(11):hover{text-decoration: underline;}
+#workBook > .header > .menu > li:nth-child(11){margin-left: 690px; margin-right: 10px;}
+#workBook > .header > .menu > li:nth-child(12):hover{background-color: #ffffff40;}
+#workBook > .header > .menu > li:nth-child(12){ 
+    background-color: rgba(0, 0, 0, 0.212);  
+    padding: 10px 18px 2px; 
+    background-image: url(../Image\ Of\ Excel/Share.png);
+    background-position: 5% 70%;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+.menu > li > input{ display: none; }
+.menu > li > input:checked + label{background-color: #f8f8f8; color: darkgreen;}
+.menu > li > input:checked ~ .subMenu{height: 100px; overflow: visible;}
+#workBook > .header > .menu > .search > input{
+    width: 160px;
+    display: inline-block;
+    background-image: url(../Image\ Of\ Excel/searchBulb.png);
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    background-size: 9px;
+    background-color: #30714D;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 11px;
+    text-indent: 10px;
+}
+.menu > li > label:hover{background-color: #ffffff40;}
+.menu > li > label{cursor: pointer; padding: 10px 18px 2px;}
+/* SubMenu */
+.menu > li > .subMenu{
+    width: 100%;
+    height: 0;
+    background-color: #f0f0f0;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    cursor: default;
+    display: flex;
+    justify-content: start;
+    flex-flow: row nowrap;
+    transition: 0.3s;
+    overflow: hidden;
+}
+#workBook > .header > .menu > li > .subMenu > .homeItems{
+    width: 150px; 
+    height:100%;
+    border-right: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    color: #555;
+}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .paste{
+    height: 90%;
+    flex-grow: 1;
+    padding-left: 7px;
+    background-image: url(../Image\ Of\ Excel/HomeImage/arrowdown.png);
+    background-position: 50% 85%;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .paste > img{
+    display: block;
+    margin-top: 8px;
+}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .right{
+    height: 90%;
+    flex-grow: 2;
+    text-indent: 14px;
+    margin-left: 5px;
+}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .right > .cut:hover{ box-shadow: 1px 1px 5px gold; cursor: pointer; border-radius: 5px;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .right > .cut{
+    margin-top: 5px;
+    background-image: url(../Image\ Of\ Excel/HomeImage/cut.png);
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    margin-bottom: 3px;
+}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .right > #copy:hover{box-shadow: 1px 1px 5px gold; cursor: pointer; border-radius: 5px;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .right > #copy{
+    padding: 0;
+    background-image: url(../Image\ Of\ Excel/HomeImage/copy.png);
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    margin-bottom: 3px;
+    position: relative;
+}
+#CopyAcardeon > li:nth-child(1){background-image: url(../Image\ Of\ Excel/HomeImage/copy.png);}
+#copy > img{margin-left: 7px; width: 7%;}
+.Acardeon{
+    width: 150px;
+    background-color: #fff;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+.Acardeon > li:hover{border-bottom: 2px solid gold; font-weight: bold;}
+.Acardeon > li{
+    height: 25px; 
+    text-indent: 25px; 
+    border: 2px solid transparent; 
+    transition: 0.2s;
+    background-repeat: no-repeat;
+    background-position: 2% 50%;
+    background-size: 12px;
+}
+.Acardeon > hr{margin: 0; margin-left: 25px;} 
+.Acardeon > .Titr{text-indent: 0; background-color: #0000005d;}
+#CopyAcardeon{height: 0; width: 130px;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .right > .format:hover{box-shadow: 1px 1px 5px gold; cursor: pointer; border-radius: 5px;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .right > .format{
+    background-image: url(../Image\ Of\ Excel/HomeImage/format.png);
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    margin-bottom: 3px;
+}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > h5,
+#workBook > .header > .menu > li > .subMenu > .homeItems > h5{
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+    line-height: 3px;
+    background-image: url(../Image\ Of\ Excel/more.png);
+    background-position: 99% 90%;
+    background-repeat: no-repeat;
+    background-size: 7px;
+    color: #777;
+}
+#workBook > .header > .menu > li > .subMenu > .homeItems:nth-child(2){ width: 200px; flex-flow: row wrap; justify-content: center;}
+#workBook > .header > .menu > li > .subMenu > .homeItems:nth-child(3){ width: 250px; flex-flow: row wrap; justify-content: start; }
+#workBook > .header > .menu > li > .subMenu > .homeItems:nth-child(4){ width: 150px; flex-flow: row wrap; justify-content: center; }
+#workBook > .header > .menu > li > .subMenu > .homeItems:nth-child(5){ width: 360px; flex-flow: row wrap; justify-content: center; gap: 5px; }
+#workBook > .header > .menu > li > .subMenu > .homeItems:nth-child(6){ width: 150px; gap: 5px; }
+#workBook > .header > .menu > li > .subMenu > .homeItems:nth-child(7){ width: 250px; justify-content: center; }
+/* HomeItem02 */
+#workBook > .header > .menu > li > .subMenu > .homeItems > #font{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#font > #FontFamily, #font > #FontSize{
+    background-color: #fff;
+    background-image: url(../Image\ Of\ Excel/arrowdown.png);
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+    background-size: 9px;
+    text-indent: 10px;
+    line-height: 25px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+#font > #FontFamily{ width: 80px; height: 25px; position: relative;}
+#FontFamily > #FontFamilyAcardeon{height: 0; z-index: 20; width: 250px; top: 25px;}
+#FontFamily > #FontFamilyAcardeon > li:nth-child(1){text-indent: 0; background-color: #0000005d; font-size: 10px; font-weight: bold;}
+#font > #FontSize{ width: 40px; height: 25px; margin-right: 8px; position: relative;}
+#font > #FontSize > #FontSizeAcardeon{width: 40px; height: 0; z-index: 20; top: 25px; left: -1px;}
+#font > #FontSize > #FontSizeAcardeon > li{text-align: center; text-indent: 0;}
+#font > #smallFont:hover,#font > #bigFont:hover{box-shadow: 1px 1px 5px gold; cursor: pointer; border-radius: 5px;}
+#font > #smallFont,#font > #bigFont{
+    background-position: 50%;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+}
+#font > #bigFont{background-image: url(../Image\ Of\ Excel/bigFont.png);}
+#font > #smallFont{background-image: url(../Image\ Of\ Excel/smallFont.png); background-size: 12px;}
+#fontDecoration{
+    width: 70px; 
+    height: 20px; 
+    border-right: 1px solid #ccc; 
+    padding-top: 3px;
+    display: flex;
+    gap: 3px;
+}
+#fontDecoration > input:checked + label{box-shadow: 1px 1px 5px gold; border-radius: 5px;}
+#fontDecoration > label,#fontBorder > label,#fontColor > label{
+    width: 16px;
+    height: 16px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 13px;
+}
+#fontDecoration > label:nth-child(2){background-image: url(../Image\ Of\ Excel/B.png);}
+#fontDecoration > label:nth-child(4){background-image: url(../Image\ Of\ Excel/I.png);}
+#fontDecoration > label:nth-child(6){background-image: url(../Image\ Of\ Excel/U.png); background-size: 8px;}
+#fontBorder{
+    width: 40px; 
+    height: 20px; 
+    border-right: 1px solid #ccc; 
+    margin-bottom: 27px;
+    display: flex;
+    justify-content: center;
+    padding-top: 3px;
+    background-image: url(../Image\ Of\ Excel/Border.png); 
+    background-repeat: no-repeat;
+    width: 30px;
+    background-size: 30px;
+    position: relative;
+}
+#fontBorder > #BorderAcardeon{height: 0; z-index: 20;}
+#fontBorder > #BorderAcardeon > li:nth-child(1){text-indent: 0; background-color: #0000005d;}
+#BgColor, #TextColor{
+    width: 60px; 
+    height: 20px;
+    justify-content: center;
+    display: flex;
+    gap: 3px;
+    padding-top: 3px;
+    position: relative;
+}
+#TextColorAcardeon, #BgColorAcardeon{
+    width: 180px;
+    height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+#TextColorAcardeon > li:not(:nth-child(1)),
+#BgColorAcardeon > li:not(:nth-child(1)){width: 15px; height: 15px; margin-bottom: 5px; margin-top: 5px;}
+#TextColorAcardeon > li:nth-child(1),#BgColorAcardeon > li:nth-child(1){
+    text-indent: 0; 
+    background-color: #0000005d; 
+    font-size: 10px; 
+    font-weight: bold;
+    width: 100%;
+}
+#TextColorAcardeon > li:nth-child(2),
+#BgColorAcardeon > li:nth-child(2){background-color: orange;}
+#TextColorAcardeon > li:nth-child(3),
+#BgColorAcardeon > li:nth-child(3){background-color: green;}
+#TextColorAcardeon > li:nth-child(4),
+#BgColorAcardeon > li:nth-child(4){background-color: red;}
+#TextColorAcardeon > li:nth-child(5),
+#BgColorAcardeon > li:nth-child(5){background-color: lightseagreen;}
+#BgColor{
+    width: 28px;
+    background-image: url(../Image\ Of\ Excel/Backgroundcolor.png);
+    background-repeat: no-repeat;
+    background-size: 28px;
+}
+#TextColor{
+    width: 28px;
+    background-image: url(../Image\ Of\ Excel/textColor.png);
+    background-repeat: no-repeat;
+    background-size: 28px;
+}
+#fontDecoration > input,#fontBorder > input,#fontColor > input{display: none;}
+#fontDecoration > label:hover,#fontBorder:hover,#BgColor:hover, #TextColor:hover{box-shadow: 1px 1px 5px gold; cursor: pointer; border-radius: 5px;}
+#font > h5{padding-top: 30px;}
+/* HomeItem03 */
+#YAlign, #XAlign{
+    width: 60px;
+    height: 20px;
+    border-right: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0;
+}
+#YAlign > input , #XAlign > input{display: none;}
+#YAlign > input:checked + label , #XAlign > input:checked + label{box-shadow: 1px 1px 5px gold; border-radius: 5px;}
+#YAlign > label:hover , #XAlign > label:hover{box-shadow: 1px 1px 5px gold; cursor: pointer; border-radius: 5px;}
+#YAlign > label , #XAlign > label{
+    width: 19px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border: 1px solid transparent;
+}
+#YAlign > label:nth-child(2){background-image: url(../Image\ Of\ Excel/YAlignTop.png); background-position: 50% 5%;}
+#YAlign > label:nth-child(4){background-image: url(../Image\ Of\ Excel/YAlignCenter.png); background-position: 50%;}
+#YAlign > label:nth-child(6){background-image: url(../Image\ Of\ Excel/YAlignBottom.png); background-position: 50% 95%;}
+#XAlign > label:nth-child(2){background-image: url(../Image\ Of\ Excel/XAlignLeft.png);}
+#XAlign > label:nth-child(4){background-image: url(../Image\ Of\ Excel/XAlignCenter.png);}
+#XAlign > label:nth-child(6){background-image: url(../Image\ Of\ Excel/XAlignRight.png);}
+#Rotate:hover, #LTR:hover, #Merge:hover{box-shadow: 1px 1px 5px gold; cursor: pointer; border-radius: 5px;}
+#Rotate{
+    width: 40px;
+    height: 20px;
+    border-right: 1px solid #ccc;
+    background-image: url(../Image\ Of\ Excel/Rotate.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 25px;
+    margin: 12px 0;
+    position: relative;
+}
+#Rotate > #RotateAcardeon{height: 0; z-index: 20; width: 180px;}
+#LTR{
+    width: 40px;
+    height: 20px;
+    border-right: 1px solid #ccc;
+    background-image: url(../Image\ Of\ Excel/LTR.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 25px;
+    margin: 12px 0;
+    position: relative;
+}
+#LTR > #LTRAcardeon{height: 0; z-index: 20;;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .TextWrap:hover{box-shadow: 1px 1px 5px gold; cursor: pointer; border-radius: 5px;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .TextWrap{
+    width: 80px;
+    height: 20px;
+    background-image: url(../Image\ Of\ Excel/TextWrap.png);
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+    background-size: 15px;
+    text-indent: 20px;
+    margin: 12px 0;
+}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .Indent{
+    width: 70px;
+    height: 20px;
+    display: flex;
+    margin: 12px 0;
+}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .Indent > .Decrease:hover,
+#workBook > .header > .menu > li > .subMenu > .homeItems > .Indent > .Increase:hover{box-shadow: 1px 1px 5px gold; cursor: pointer; border-radius: 5px;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .Indent > .Decrease,
+#workBook > .header > .menu > li > .subMenu > .homeItems > .Indent > .Increase{
+    width: 25px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 15px;
+}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .Indent > .Decrease{background-image: url(../Image\ Of\ Excel/Decrease.png);}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .Indent > .Increase{background-image: url(../Image\ Of\ Excel/Increase.png);}
+#Merge{
+    width: 115px;
+    height: 20px;
+    background-image: url(../Image\ Of\ Excel/Merge.png);
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+    background-size: 15px;
+    text-indent: 20px;
+    margin: 12px 0;
+    position: relative;
+}
+#Merge > img{width: 8px; height: 8px;}
+#MergeAcardeon{ height: 0; width: 120px; z-index: 20; }
+/* HomeItem04 */
+#NumberFormat{
+    width: 90%;
+    height: 25px;
+    background-color: #fff;
+    background-image: url(../Image\ Of\ Excel/arrowdown.png);
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+    background-size: 9px;
+    text-indent: 10px;
+    line-height: 25px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    margin-top: 12px;
+    position: relative;
+}
+#NumberFormatAcardeon{
+    height: 0;
+    top: 25px;
+    width: 185px;
+    z-index: 20;
+}
+#NumberFormatAcardeon > li:not(:nth-child(13)){height: 40px; text-indent: 50px; line-height: 40px;}
+#NumberFormatAcardeon > hr{margin: 0;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .NumberStyle{
+    width: 55%; 
+    height: 25px; 
+    display: flex;
+    border-right: 1px solid #ccc;
+    margin: 11px 0;
+}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .NumberStyle > div{
+    width: 30%;
+    height: 80%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .NumberStyle > div:hover{cursor: pointer; box-shadow: 1px 1px 5px gold; border-radius: 5px;}
+#Currency{
+    background-image: url(../Image\ Of\ Excel/Currency.png);
+    background-size: 20px;
+    position: relative;
+}
+#CurrencyAcardeon{width: 215px; z-index: 20;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .NumberStyle > .Darsad{
+    background-image: url(../Image\ Of\ Excel/Darsad.png);
+    background-size: 10px;
+}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .NumberStyle > .Virgol{
+    background-image: url(../Image\ Of\ Excel/Virgol.png);
+    background-size: 4px;
+}
+#workBook > .header > .menu > li > .subMenu > .homeItems:nth-child(4) > .Indent > .Decrease{background-size: 12px; background-image: url(../Image\ Of\ Excel/Decrease02.png);}
+#workBook > .header > .menu > li > .subMenu > .homeItems:nth-child(4) > .Indent > .Increase{background-size: 12px; background-image: url(../Image\ Of\ Excel/Increase02.png);}
+#workBook > .header > .menu > li > .subMenu > .homeItems:nth-child(4) > .Indent{margin: 11px 0; width: 40%;}
+/* HomeItem05 */
+#Conditional:hover, #ForamtTable:hover{box-shadow: 1px 1px 5px gold; cursor: pointer; border-radius: 5px;}
+#Conditional, #ForamtTable{
+    width: 20%;
+    background-repeat: no-repeat;
+    background-position: 50% 2%;
+    background-size: 35px;
+    position: relative;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 12px;
+}
+#Conditional{background-image: url(../Image\ Of\ Excel/Conditional.png);}
+#ConditionalAcardeon{
+    top: 60px; 
+    height: 0;
+    z-index: 1;
+    width: 200px;
+    font-size: 12px;
+}
+#ConditionalAcardeon > li:hover{background-color: #30714da1;}
+#ConditionalAcardeon > li{text-indent: 40px; line-height: 50px; height: 50px;}
+#ConditionalAcardeon > li:nth-child(8){height: 25px; text-indent: 25px; line-height: 20px;}
+#ConditionalAcardeon > li:nth-child(9){height: 25px; text-indent: 25px; line-height: 20px;}
+#ConditionalAcardeon > li:nth-child(10){height: 25px; text-indent: 25px; line-height: 20px;}
+#ConditionalAcardeon > li:hover > ul{height: auto; opacity: 1; visibility: visible;}
+#ConditionalAcardeon > li:nth-child(2) > ul{top: 70px;}
+#ConditionalAcardeon > li > ul{left: 190px; line-height: 20px;}
+#ConditionalAcardeon > li > ul > li:not(:nth-child(9)){height: 40px; line-height: 40px;}
+#ConditionalAcardeon > li:nth-child(2) > ul > li:nth-child(8){height: 25px; line-height: 20px;}
+#ConditionalAcardeon > li > ul > li:hover{background-color: #30714da1;}
+#ConditionalAcardeon > li > img{ width: 6px; height: 6px; }
+#ForamtTable{background-image: url(../Image\ Of\ Excel/FormatTable.png);}
+#FormatTableAcardeon{ 
+    top: 60px; 
+    height: 0;
+    display: flex;
+    row-gap: 10px;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    width: 500px;
+    z-index: 1;
+}
+#FormatTableAcardeon > li:not(:nth-child(1)){text-indent: 0; width: 20%; height: 80px;}
+#FormatTableAcardeon > li > img{width: 100%; height: 100%;}
+#FormatTableAcardeon > li:nth-child(1){text-indent: 0; background-color: #0000005d; width: 100%;}
+#Conditional > img, #ForamtTable > img{width: 6px; height: 6px;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .RowStyle{
+    border: 1px solid #555;
+    width: 50%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 3px;
+    row-gap: 5px;
+    overflow-y: scroll;
+    background-color: #fff;
+    margin-top: 12px;
+}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .RowStyle > input{display: none;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .RowStyle > input:checked + label{outline: 3px solid #ccc;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .RowStyle > label:hover{outline: 3px solid #ccc;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .RowStyle > label{
+    width: 45%;
+    height: 20px;
+    cursor: pointer;
+}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .RowStyle > label:nth-child(2),
+#workBook > .header > .menu > li > .subMenu > .homeItems > .RowStyle > label:nth-child(4){margin-top: 5px;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .RowStyle > label:nth-child(2){background-color: #fff; color: #000;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .RowStyle > label:nth-child(4){background-color: rgb(255, 119, 119); color: red;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .RowStyle > label:nth-child(6){background-color: rgb(83, 255, 83); color: green;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .RowStyle > label:nth-child(8){background-color: rgb(255, 216, 60); color: rgb(186, 127, 0);}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .RowStyle > label:nth-child(10){background-color: #ccc; color: orange;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .RowStyle > label:nth-child(12){background-color: #555; color: #fff;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .RowStyle > label:nth-child(14){background-color: #fff; color: #555;}
+#workBook > .header > .menu > li > .subMenu > .homeItems > .RowStyle > label:nth-child(16){background-color: #ff9429; color: #000;}
+/* HomeItem06 */
+#InsertCell:hover, #DeleteCell:hover, #FormatCell:hover{box-shadow: 1px 1px 5px gold; cursor: pointer; border-radius: 5px;}
+#InsertCell, #DeleteCell, #FormatCell{
+    width: 30%;
+    height: 60%;
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    background-size: 30px;
+    position: relative;
+    line-height: 95px;
+    font-size: 10px;
+}
+#InsertCell > img, #DeleteCell > img, #FormatCell > img{width: 6px; height: 6px;}
+#InsertCell{background-image: url(../Image\ Of\ Excel/Insert.png);}
+#InsertCellAcardeon{
+    top: 60px;
+    z-index: 1; 
+    height: 0;
+    line-height: 20px;
+}
+#DeleteCell{background-image: url(../Image\ Of\ Excel/Delete.png);}
+#DeleteCellAcardeon{
+    top: 60px;
+    z-index: 2; 
+    height: 0;
+    line-height: 20px;
+}
+#FormatCell{background-image: url(../Image\ Of\ Excel/Format.png);}
+#FormatCellAcardeon{
+    top: 60px;
+    z-index: 3; 
+    height: 0;
+    line-height: 20px;
+}
+#FormatCellAcardeon > li:nth-child(1){text-indent: 0; background-color: #0000005d;}
+/* HomeItem07 */
+#workBook > .header > .menu > li > .subMenu > .homeItems > .EditLeft,
+#workBook > .header > .menu > li > .subMenu > .homeItems > .EditRight{
+    width: 45%;
+    height: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 3px;
+}
+#Autosum:hover, #Fill:hover, #Clear:hover{box-shadow: 1px 1px 5px gold; cursor: pointer; border-radius: 5px;}
+#Autosum, #Fill, #Clear{
+    width: 100%;
+    height: 20px;
+    text-indent: 20px;
+    background-repeat: no-repeat;
+    background-position: 2% 50%;
+    background-size: 15px;
+    position: relative;
+}
+#Autosum > img, #Fill > img, #Clear > img{width: 8px; height: 8px;}
+#Autosum > p{background-position: 98% 50%;}
+#Fill > p{background-position: 40% 50%;}
+#Clear > p{background-position: 50% 50%;}
+#Autosum{background-image: url(../Image\ Of\ Excel/Autosum.png);}
+#AutosumAcardeon{z-index: 1; height: 0;}
+#Fill{background-image: url(../Image\ Of\ Excel/Fill.png);}
+#FillAcardeon{z-index: 2; height: 0;}
+#Clear{background-image: url(../Image\ Of\ Excel/Clear.png);}
+#ClearAcardeon{z-index: 3; height: 0;}
+#Sort:hover, #Find:hover{box-shadow: 1px 1px 5px gold; cursor: pointer; border-radius: 5px;}
+#Sort, #Find{
+    width: 45%;
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    padding-top: 50px;
+    text-align: center;
+}
+#Sort{background-image: url(../Image\ Of\ Excel/Sort.png);}
+#Find{background-image: url(../Image\ Of\ Excel/Find.png);}
+#Sort{position: relative; margin-left: 2px;}
+#SortAcardeon{
+    width: 160px;
+    top: 85px;
+    left: -110px;
+    height: 0;
+}
+#Find{position: relative;}
+#FindAcardeon{
+    width: 160px;
+    top: 85px;
+    left: -110px;
+    height: 0;
+}
+#Find > img, #Sort > img{ width: 8px; height: 8px;}
+/* InsertTab */
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems{
+    display: flex;
+    justify-content: start;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 11px;
+}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems{ height: 100%; border-right: 1px solid #ccc; }
+#InsertItems.subMenu  > .ExcelTabItems > .PartOfTabItems:nth-child(1){width: 185px;}
+#InsertItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(2){width: 185px;}
+#InsertItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(3){width: 238px;}
+#InsertItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(4){width: 250px;}
+#InsertItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(5){width: 50px;}
+#InsertItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(6){width: 120px;}
+#InsertItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(7){width: 90px;}
+#InsertItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(8){width: 60px;}
+#InsertItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(9){width: 200px;}
+#InsertItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(10){width: 90px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    height: 90%;
+}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > li:hover{box-shadow: 1px 1px 5px gold; cursor: pointer; border-radius: 5px;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .BoxShadow:hover{box-shadow: none;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > li{
+    width: 30%;
+    height: 40%;
+    padding-top: 35px;
+    margin-top: 12px;
+    text-align: center;
+    color: #555;
+    background-position: 50% 2%;
+    background-repeat: no-repeat;
+    background-size: 27px;
+}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .Pivot{background-image: url(../Image\ Of\ Excel/InsertImage/Provit.png);}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .PivotTable{background-image: url(../Image\ Of\ Excel/InsertImage/ProvitTable.png); width: 40%;  background-size: 33px;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .Table{background-image: url(../Image\ Of\ Excel/InsertImage/Table.png); width: 20%; background-size: 28px;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .InsertTabPicture{width: 20%; background-image: url(../Image\ Of\ Excel/InsertImage/Picture.png);}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .InsertTabOnlinePicture{width: 20%; background-image: url(../Image\ Of\ Excel/InsertImage/OnlinePicture.png);}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .InsertTabToolsPicture{width: 60%; padding: 0; height: 80%;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > li > div:hover{box-shadow: 1px 1px 5px gold; cursor: pointer; border-radius: 5px;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > li > div{
+    width: 100%;
+    height: 25%;
+    margin-bottom: 5px;
+    text-align: left;
+    text-indent: 18px;
+    background-position: 2% 50%;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > li > #Shape{background-image: url(../Image\ Of\ Excel/InsertImage/Shape.png); position: relative;}
+#Shape > img{width: 8px; height: 8px; margin-left: 15px;}
+#ShapeMenu{
+    display: flex;
+    flex-flow: row wrap;
+    z-index: 20;
+    justify-content: center;
+}
+#ShapeMenu > .Titr{width: 100%;}
+#ShapeMenu > li{
+    width: 25px; 
+    height: 25px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+#ShapeMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/khat.png);}
+#ShapeMenu > li:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/flesh.png);}
+#ShapeMenu > li:nth-child(4){background-image: url(../Image\ Of\ Excel/InsertImage/mostatil.png);}
+#ShapeMenu > li:nth-child(5){background-image: url(../Image\ Of\ Excel/InsertImage/baysi.png);}
+#ShapeMenu > li:nth-child(6){background-image: url(../Image\ Of\ Excel/InsertImage/moraba.png);}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > li > .SmartArt{background-image: url(../Image\ Of\ Excel/InsertImage/SmartArt.png);}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > li > .ScreenShot{background-image: url(../Image\ Of\ Excel/InsertImage/ScreenShot.png);}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .MySelfAdd{width: 40%; height: 80%; padding: 0;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .MySelfAdd > .Store{margin-bottom: 30px; background-image: url(../Image\ Of\ Excel/InsertImage/Store.png); background-size: 12px;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .MySelfAdd > #MyAdd{position: relative; background-image: url(../Image\ Of\ Excel/InsertImage/MyAdd.png); background-size: 12px;}
+#MyAdd > img{width: 8px; height: 8px;}
+#MyAddMenu{width: 250px;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .OtherAdd{width: 60%; height: 80%; padding: 0;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .OtherAdd > .Visio{background-image: url(../Image\ Of\ Excel/InsertImage/Viso.png); background-size: 14px;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .OtherAdd > .BingMap{background-image: url(../Image\ Of\ Excel/InsertImage/Bing.png); background-size: 14px;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .OtherAdd > .Graph{background-image: url(../Image\ Of\ Excel/InsertImage/PeopleAdd.png); background-size: 14px;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .InsertChart{background-image: url(../Image\ Of\ Excel/InsertImage/Chart.png);}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .ChartType{width: 35%; padding: 0; height: 80%;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .ChartType > .ChartTypeMenu{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .ChartType > .ChartTypeMenu > li{ 
+    width: 30%; 
+    height: 30%; 
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 23px;
+}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .ChartType > .ChartTypeMenu > li:hover{box-shadow: 1px 1px 5px gold; cursor: pointer;}
+#ColumnChart{background-image: url(../Image\ Of\ Excel/InsertImage/ColumnChart.png); position: relative;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .BoxShadow > .AllIcon > .ItemsIcon > .Icon{
+    z-index: 20; 
+    display: flex; 
+    justify-content: center; 
+    flex-flow: row wrap;
+    width: 180px;
+}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .BoxShadow > .AllIcon > .ItemsIcon > .Icon > li{
+    width: 50px; 
+    height: 50px;
+    text-indent: 0;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .BoxShadow > .AllIcon > .ItemsIcon > .Icon > .Titr{width: 100%; height: 25px;}
+#ColumnChartMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/Column1.png);}
+#ColumnChartMenu > li:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/Column2.png);}
+#ColumnChartMenu > li:nth-child(4){background-image: url(../Image\ Of\ Excel/InsertImage/Column3.png);}
+#HierarchyChart{background-image: url(../Image\ Of\ Excel/InsertImage/HierarchyChart.png); position: relative;}
+#HierarchyChartMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/ThreeMap.png);}
+#StockChart{background-image: url(../Image\ Of\ Excel/InsertImage/StockChart.png); position: relative;}
+#StockChartMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/StockChartMenu1.png);}
+#LineChart{background-image: url(../Image\ Of\ Excel/InsertImage/LineChart.png); position: relative;}
+#LineChartMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/LineChartMenu1.png);}
+#LineChartMenu > li:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/LineChartMenu2.png);}
+#LineChartMenu > li:nth-child(4){background-image: url(../Image\ Of\ Excel/InsertImage/LineChartMenu3.png);}
+#StaticChart{background-image: url(../Image\ Of\ Excel/InsertImage/StaticChart.png); position: relative;}
+#StaticChartMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/StaticChartMenu1.png);}
+#StaticChartMenu > li:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/StaticChartMenu2.png);}
+#ComboChart{background-image: url(../Image\ Of\ Excel/InsertImage/ComboChart.png); position: relative;}
+#ComboChartMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/ComboChartMenu1.png);}
+#ComboChartMenu > li:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/ComboChartMenu2.png);}
+#ComboChartMenu > li:nth-child(4){background-image: url(../Image\ Of\ Excel/InsertImage/ComboChartMenu3.png);}
+#PieChart{background-image: url(../Image\ Of\ Excel/InsertImage/PieChart.png); position: relative;}
+#PieChartMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/PieChartMenu1.png);}
+#PieChartMenu > li:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/PieChartMenu2.png);}
+#PieChartMenu > li:nth-child(4){background-image: url(../Image\ Of\ Excel/InsertImage/PieChartMenu3.png);}
+#ScatterChart{background-image: url(../Image\ Of\ Excel/InsertImage/ScatterChart.png); position: relative;}
+#ScatterChartMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/ScatterChartMenu1.png);}
+#ScatterChartMenu > li:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/ScatterChartMenu2.png);}
+#RadarChart{background-image: url(../Image\ Of\ Excel/InsertImage/RadarChart.png); position: relative;}
+#RadarChartMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/RadarChartMenu1.png);}
+#RadarChartMenu > li:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/RadarChartMenu2.png);}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > #PivotChart{position: relative; width: 25%; background-image: url(../Image\ Of\ Excel/InsertImage/PivotCahrt.png);}
+#PivotChart > img{width: 8px; height: 8px;}
+#PivotChart > #PivotChartMenu{top: 70px; height: 0; width: 180px;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > #ThreeDMap{position: relative; width: 80%; background-image: url(../Image\ Of\ Excel/InsertImage/3DChart.png);}
+#ThreeDMap > img{width: 8px; height: 8px;}
+#ThreeDMap > #ThreeDMapMenu{top: 70px; height: 0; width: 200px;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .Line{background-image: url(../Image\ Of\ Excel/InsertImage/Line.png);}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .Column{background-image: url(../Image\ Of\ Excel/InsertImage/Column.png);}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .Win-Loss{background-image: url(../Image\ Of\ Excel/InsertImage/Win-Loss.png);}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .Slicer{width: 40%; background-image: url(../Image\ Of\ Excel/InsertImage/Slicer.png);}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .TimeLine{width: 60%; background-image: url(../Image\ Of\ Excel/InsertImage/TimeLine.png); background-position: 50% 16%;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .InserTab-HyperLink{width: 80%; background-image: url(../Image\ Of\ Excel/InsertImage/HyperLink.png);}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .TextBox{width: 20%; background-image: url(../Image\ Of\ Excel/InsertImage/TextBox.png);}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .Header-Footer{width: 20%; line-height: 11px; background-image: url(../Image\ Of\ Excel/InsertImage/Header-Footer.png); background-size: 20px;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .WordType{width: 60%; padding: 0; height: 80%;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .WordType > #WordArt{position: relative; background-image: url(../Image\ Of\ Excel/InsertImage/WordArt.png); background-size: 12px;}
+#WordArt > img{width: 8px; height: 8px; margin-left: 30px;}
+#WordArt > #WordArtMenu{z-index: 20; display: flex; justify-content: center;}
+#WordArt > #WordArtMenu > li{
+    width: 30px; 
+    height: 30px;
+    text-indent: 0;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+#WordArt > #WordArtMenu > li:nth-child(1){background-image: url(../Image\ Of\ Excel/InsertImage/A1.png);}
+#WordArt > #WordArtMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/A2.png);}
+#WordArt > #WordArtMenu > li:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/A3.png);}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .WordType > #Signature{position: relative; background-image: url(../Image\ Of\ Excel/InsertImage/Signature.png);}
+#Signature > img{width: 8px; height: 8px; margin-left: 2px;}
+#Signature > #SignatureMenu{z-index: 20; width: 230px;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .WordType > .Object{background-image: url(../Image\ Of\ Excel/InsertImage/Object.png); background-size: 14px;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .Marks{width: 90%; padding: 0; height: 80%;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .Marks > #Equation{position: relative; background-image: url(../Image\ Of\ Excel/InsertImage/Equation.png); background-size: 13px;}
+#Equation > img{width: 8px; height: 8px;}
+#Equation > #EquationMenu{z-index: 20; height: 0; width: 400px; left: -320px;}
+#Equation > #EquationMenu > li:nth-child(2){height: 80px; text-indent: 0;}
+#Equation > #EquationMenu > li:nth-child(2) > img{width: 100%; height: 100%;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > .Marks > .Symbol{position: relative; background-image: url(../Image\ Of\ Excel/InsertImage/Symbol.png); background-size: 13px;}
+/* Page Layout */
+#LayoutItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(1){width: 120px;}
+#LayoutItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(2){width: 400px;}
+#LayoutItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(3){width: 150px;}
+#LayoutItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(4){width: 200px;}
+#LayoutItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(5){width: 365px;}
+#LayoutItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(3) > .Items{flex-flow: row wrap;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #ThemeType2{position: relative; width: 40%; background-image: url(../Image\ Of\ Excel/InsertImage/ThemeType.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #ThemeType2 > .OfficeItems{top: 70px;}
+.OfficeItems{
+    width: 300px; 
+    z-index: 20; 
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+.OfficeItems > .Titr{width: 100%; height: 20px; text-align: left;}
+.OfficeItems > li{
+    width: 60px;
+    height: 60px;
+    text-indent: 0;
+    text-align: center;
+    line-height: 10px;
+}
+.OfficeItems > li > img{width: 100%; height: 80%;}
+#ThemeType2 > img{width: 8px; height: 8px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ThemeStyle{width: 60%; padding: 0; height: 80%;}
+#ThemeColor{background-image: url(../Image\ Of\ Excel/InsertImage/ThemeColor.png); position: relative;}
+#ThemeColorMenu{width: 200px; z-index: 20;}
+#ThemeColorMenu > li{height: 15px; text-indent: 0;}
+#ThemeColorMenu > li:hover{font-weight: normal;}
+#ThemeColorMenu > li > img{width: 45%; height: 100%; margin-right: 10px;}
+#ThemeColor > img{width: 8px; height: 8px;}
+#ThemeFont{background-image: url(../Image\ Of\ Excel/InsertImage/ThemeFont.png);position: relative;}
+#ThemeFont > img{width: 8px; height: 8px;}
+#ThemeFontMenu{width: 180px; z-index: 20;}
+#ThemeFontMenu > li{text-indent: 60px; height: 60px;}
+#ThemeFontMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/FontType1.png); background-size: 55px;}
+#ThemeFontMenu > li:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/FontType2.png); background-size: 55px;}
+#ThemeFontMenu > .Titr{text-indent: 0; height: 20px;}
+#ThemeEffect{background-image: url(../Image\ Of\ Excel/InsertImage/EffectsTheme.png); position: relative;}
+#ThemeEffect > img{width: 8px; height: 8px;}
+#Margins{background-image: url(../Image\ Of\ Excel/InsertImage/Margins.png); position: relative;}
+#MarginsMenu{width: 200px; z-index: 20; top: 70px;}
+#MarginsMenu > li{height: 60px; text-indent: 60px;}
+#MarginsMenu > li:nth-child(1){background-image: url(../Image\ Of\ Excel/InsertImage/Custom.png); background-size: 25px;}
+#MarginsMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/Margins.png); background-size: 25px;}
+#Margins > img{width: 8px; height: 8px;}
+#Orientation{background-image: url(../Image\ Of\ Excel/InsertImage/Orientation.png);position: relative;}
+#OrientationMenu{width: 100px; z-index: 20; top: 70px;}
+#OrientationMenu > li{height: 40px; text-indent: 40px;}
+#OrientationMenu > li:nth-child(1){background-image: url(../Image\ Of\ Excel/InsertImage/Portrait.png); background-size: 20px;}
+#OrientationMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/Landscape.png); background-size: 25px;}
+#Orientation > img{width: 8px; height: 8px; margin-left: 44px;}
+#Size{background-image: url(../Image\ Of\ Excel/InsertImage/Size.png); position: relative;}
+#SizeMenu{width: 100px; z-index: 20; top: 70px;}
+#SizeMenu > li{height: 40px; text-indent: 40px;}
+#SizeMenu > li:nth-child(1){background-image: url(../Image\ Of\ Excel/InsertImage/A.png); background-size: 20px;}
+#SizeMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/A.png); background-size: 18px;}
+#SizeMenu > li:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/A.png); background-size: 14px;}
+#Size > img{width: 8px; height: 8px;}
+#PrintArea{background-image: url(../Image\ Of\ Excel/InsertImage/PrintArea.png); position: relative;}
+#PrintAreaMenu{top: 70px;}
+#PrintArea > img{width: 8px; height: 8px; margin-left: 40px;}
+#Breaks{background-image: url(../Image\ Of\ Excel/InsertImage/Breaks.png);position: relative;}
+#BreaksMenu{top: 70px;}
+#Breaks > img{width: 8px; height: 8px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .BackgroundSheet{background-image: url(../Image\ Of\ Excel/InsertImage/Background.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .PrintTitles{background-image: url(../Image\ Of\ Excel/InsertImage/Prints.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .WidthSheet,
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .HeightSheet{
+    text-indent: 5px; 
+    width: 90%; 
+    height: 25px; 
+    padding: 0; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+#HeightMenu,#WidthMenu{z-index: 20;}
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > li > #WidthWorkbook,
+#workBook > .header > .menu > li > .subMenu  > .ExcelTabItems > .PartOfTabItems > .Items > li > #HeightWorkbook{
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    width: 50%;
+    height: 100%;
+    text-indent: 0;
+    position: relative;
+}
+#WidthWorkbook > img,
+#HeightWorkbook > img{width: 8px; height: 8px; margin-left: 5px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ScaleSheet{
+    width: 90%; 
+    height: 25px; 
+    padding: 0; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ScaleSheet > input{
+    width: 40%; 
+    height: 90%;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-left: 16px;
+    background-color: #f0f0f0;
+    color: #555;
+}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .PageSide{background-image: url(../Image\ Of\ Excel/InsertImage/Right-to-Left.png); background-size: 25px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Gridlines{padding: 0; height: 80%; border-right: 1px solid #ccc;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Headings{padding: 0; height: 80%;}
+#Bring{background-image: url(../Image\ Of\ Excel/InsertImage/Bring.png);position: relative;}
+#BringMenu{top: 70px; z-index: 20;}
+#Bring > img{width: 8px; height: 8px;}
+#Send{background-image: url(../Image\ Of\ Excel/InsertImage/Send.png);position: relative;}
+#SendMenu{top: 70px; z-index: 20;}
+#Send > img{width: 8px; height: 8px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items >.Pane{background-image: url(../Image\ Of\ Excel/InsertImage/Pane.png);position: relative;}
+#AlignObject{background-image: url(../Image\ Of\ Excel/InsertImage/Align.png);position: relative;}
+#AlignMenu{top: 70px; z-index: 20;}
+#AlignObject > img{width: 8px; height: 8px;}
+#Group{background-image: url(../Image\ Of\ Excel/InsertImage/Group.png);position: relative; filter: grayscale(100%);}
+#Group > img{width: 8px; height: 8px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #Group:hover{cursor: default; box-shadow: none; border-radius: 0;}
+#RotateObject{background-image: url(../Image\ Of\ Excel/InsertImage/Rotate.png);position: relative; filter: grayscale(100%);}
+#RotateObject > img{width: 8px; height: 8px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #RotateObject:hover{cursor: default; box-shadow: none; border-radius: 0;}
+/* Formules */
+#FormulasItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(1){width: 550px;}
+#FormulasItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(2){width: 200px;}
+#FormulasItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(3){width: 300px;}
+#FormulasItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(4){width: 180px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .insertFunction{background-image: url(../Image\ Of\ Excel/InsertImage/Formulse.png); background-size: 25px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #autoSum2{
+    background-image: url(../Image\ Of\ Excel/InsertImage/AutoSum2.png),url(../Image\ Of\ Excel/arrowdown.png);
+    background-position: 50% 2%, 50% 98%;
+    background-size: 30px, 8px;
+    position: relative;
+}
+#autoSum2Menu{z-index: 20; top: 70px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #recentlyUsed{
+    background-image: url(../Image\ Of\ Excel/InsertImage/RecentlyUsed.png),url(../Image\ Of\ Excel/arrowdown.png);
+    background-position: 50% 2%, 50% 98%;
+    background-size: 30px, 8px;
+    line-height: 11px;
+    position: relative;
+}
+#recentlyUsedMenu{z-index: 20; top: 70px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #financial{
+    background-image: url(../Image\ Of\ Excel/InsertImage/Financial.png),url(../Image\ Of\ Excel/arrowdown.png);
+    background-position: 50% 2%, 50% 98%;
+    background-size: 30px, 8px;
+    position: relative;
+}
+#financialMenu{z-index: 20; top: 70px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #logical{
+    background-image: url(../Image\ Of\ Excel/InsertImage/Logical.png),url(../Image\ Of\ Excel/arrowdown.png);
+    background-position: 50% 2%, 50% 98%;
+    background-size: 30px, 8px;
+    position: relative;
+}
+#logicalMenu{z-index: 20; top: 70px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #functionText{
+    background-image: url(../Image\ Of\ Excel/InsertImage/Text.png),url(../Image\ Of\ Excel/arrowdown.png);
+    background-position: 50% 2%, 50% 98%;
+    background-size: 30px, 8px;
+    position: relative;
+}
+#functionTextMenu{z-index: 20; top: 70px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #functionDate{
+    background-image: url(../Image\ Of\ Excel/InsertImage/Date-Time.png),url(../Image\ Of\ Excel/arrowdown.png);
+    background-position: 50% 2%, 50% 98%;
+    background-size: 30px, 8px;
+    line-height: 11px;
+    position: relative;
+}
+#functionDateMenu{z-index: 20; top: 70px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #lookup{
+    background-image: url(../Image\ Of\ Excel/InsertImage/Loockup.png),url(../Image\ Of\ Excel/arrowdown.png);
+    background-position: 50% 2%, 50% 98%;
+    background-size: 30px, 8px;
+    line-height: 11px;
+    position: relative;
+}
+#lookupMenu{z-index: 20; top: 70px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #math{
+    background-image: url(../Image\ Of\ Excel/InsertImage/Math.png),url(../Image\ Of\ Excel/arrowdown.png);
+    background-position: 50% 2%, 50% 98%;
+    background-size: 30px, 8px;
+    line-height: 11px;
+    position: relative;
+}
+#mathMenu{z-index: 20; top: 70px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #more{
+    background-image: url(../Image\ Of\ Excel/InsertImage/More.png),url(../Image\ Of\ Excel/arrowdown.png);
+    background-position: 50% 2%, 50% 98%;
+    background-size: 30px, 8px;
+    line-height: 11px;
+    position: relative;
+}
+#moreMenu{z-index: 20; top: 70px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Manager{width: 30%; background-image: url(../Image\ Of\ Excel/InsertImage/NameManager.png); background-position: 50% 20%;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Defined{width: 70%; padding: 0; height: 80%;}
+#DefineName{background-image: url(../Image\ Of\ Excel/InsertImage/DefineName.png); position: relative;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Defined > .Formula{background-image: url(../Image\ Of\ Excel/InsertImage/Use.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Defined > .CreateSelection{background-image: url(../Image\ Of\ Excel/InsertImage/CreateSelection.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Trace{width: 40%; height: 80%; padding: 0;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Trace > div:nth-child(1){background-image: url(../Image\ Of\ Excel/InsertImage/Trace.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Trace > div:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/Trace2.png);}
+#RemoveArrow{background-image: url(../Image\ Of\ Excel/InsertImage/RemoveArrow.png); position: relative;}
+#RemoveArrowMenu{width: 180px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Auditing{width: 40%; height: 80%; padding: 0;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Auditing > div:nth-child(1){background-image: url(../Image\ Of\ Excel/InsertImage/Show.png);}
+#Error2{background-image: url(../Image\ Of\ Excel/InsertImage/Error.png); position: relative;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Auditing > div:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/Eva.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .WatchWindow{background-image: url(../Image\ Of\ Excel/InsertImage/Watch.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .WatchWindow{width: 20%;}
+#DefineName > img, 
+#RemoveArrow > img, 
+#Error2 > img{width: 8px; height: 8px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #CalculationLeft{
+    width: 30%;
+    background-image: url(../Image\ Of\ Excel/InsertImage/Calculation1.png); 
+    background-size: 20px;
+    position: relative;
+}
+#CalculationLeftMenu{z-index: 20; top: 70px; width: 220px;}
+#CalculationLeft > img{width: 8px; height: 8px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .CalculationRight{width: 70%; height: 80%; padding: 0;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .CalculationRight > div:nth-child(1){margin-bottom: 15px;background-image: url(../Image\ Of\ Excel/InsertImage/Calculation2.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .CalculationRight > div:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/Calculation3.png);}
+#DataItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(1){width: 300px;}
+#DataItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(2){width: 170px;}
+#DataItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(3){width: 130px;}
+#DataItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(4){width: 200px;}
+#DataItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(5){width: 420px;}
+#DataItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(6){width: 100px;}
+#DataItems.subMenu > .ExcelTabItems > .PartOfTabItems:nth-child(7){width: 170px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .FromAccess{background-image: url(../Image\ Of\ Excel/InsertImage/Access.png); }
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .FromWeb{background-image: url(../Image\ Of\ Excel/InsertImage/Web.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .FromText{background-image: url(../Image\ Of\ Excel/InsertImage/FromText.png);}
+#FromSources{background-image: url(../Image\ Of\ Excel/InsertImage/Sources.png); position: relative;}
+#FromSourcesMenu{top: 70px; z-index: 20; width: 220px;}
+#FromSourcesMenu > li{height: 40px; background-size: 18px;}
+#FromSourcesMenu > li:nth-child(1){background-image: url(../Image\ Of\ Excel/InsertImage/FromSource1.png);}
+#FromSourcesMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/FromSource2.png);}
+#FromSourcesMenu > li:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/FromSource3.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Existing{background-image: url(../Image\ Of\ Excel/InsertImage/Exsiting.png);}
+.ArrowPicture > img{width: 8px; height: 8px;}
+#Query{width: 30%;background-image: url(../Image\ Of\ Excel/InsertImage/Query.png); position: relative;}
+#QueryMenu{z-index: 20; top: 70px; width: 200px;}
+#QueryMenu > .BigHeight{height: 40px; text-indent: 40px; background-size: 24px;}
+#QueryMenu > hr:nth-child(7){margin: 0;}
+#QueryMenu > li:nth-child(1){background-image: url(../Image\ Of\ Excel/InsertImage/From1.png); background-size: 20px;}
+#QueryMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/FromSource1.png);}
+#QueryMenu > li:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/From2.png);}
+#QueryMenu > li:nth-child(4){background-image: url(../Image\ Of\ Excel/InsertImage/From3.png);}
+#QueryMenu > li:nth-child(6){background-image: url(../Image\ Of\ Excel/InsertImage/From4.png);}
+#QueryMenu > li:nth-child(8){background-image: url(../Image\ Of\ Excel/InsertImage/From5.png);}
+#QueryMenu > li:nth-child(9){background-image: url(../Image\ Of\ Excel/InsertImage/From6.png);}
+#QueryMenu > li:nth-child(11){background-image: url(../Image\ Of\ Excel/InsertImage/From7.png);}
+#QueryMenu > li:nth-child(12){background-image: url(../Image\ Of\ Excel/InsertImage/From8.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .transform{width: 70%; padding: 0; height: 80%;}
+#RefreshAll{width: 30%;width: 30%;background-image: url(../Image\ Of\ Excel/InsertImage/RefreshAll.png); position: relative;}
+#RefreshAllMenu{z-index: 20; top: 70px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .transform > div:nth-child(1){background-image: url(../Image\ Of\ Excel/InsertImage/ShowQuery.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .transform > div:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/FromTable.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .transform > div:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/RecentSource.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Connection{width: 70%; padding: 0; height: 80%;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Connection > div:nth-child(1){background-image: url(../Image\ Of\ Excel/InsertImage/Connection.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Connection > div:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/Propertise.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Connection > div:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/Edit.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Sort{width: 20%;background-image: url(../Image\ Of\ Excel/InsertImage/Sort.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Filter{width: 20%;background-image: url(../Image\ Of\ Excel/InsertImage/Filter.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .FilterItems{width: 60%; height: 80%; padding: 0;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .FilterItems > div:nth-child(1){background-image: url(../Image\ Of\ Excel/InsertImage/Clear.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .FilterItems > div:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/Reapply.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .FilterItems > div:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/Advanced.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Text-Columns{background-image: url(../Image\ Of\ Excel/InsertImage/TexttoColumns.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .FlashFill{background-image: url(../Image\ Of\ Excel/InsertImage/FlashFill.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Remove-Duplicates{background-image: url(../Image\ Of\ Excel/InsertImage/Remove2.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #Validation{
+    background-image: url(../Image\ Of\ Excel/InsertImage/Validation.png),url(../Image\ Of\ Excel/arrowdown.png); 
+    background-position: 50% 2%, 50% 98%;
+    background-size: 27px, 8px;
+    position: relative;
+    line-height: 11px;
+
+}
+#ValidationMenu{z-index: 20; top: 70px; width: 180px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Consolidate{background-image: url(../Image\ Of\ Excel/InsertImage/Consolidate.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Relationships{background-image: url(../Image\ Of\ Excel/InsertImage/Relationships.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Manage-Data{background-image: url(../Image\ Of\ Excel/InsertImage/ManageData.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #Analysis{
+    width: 50%;
+    background-image: url(../Image\ Of\ Excel/InsertImage/Analysis.png),url(../Image\ Of\ Excel/arrowdown.png);
+    background-position: 50% 2%, 50% 98%;
+    background-size: 27px, 8px; 
+    line-height: 11px;
+    position: relative;
+}
+#AnalysisMenu{z-index: 20; top: 70px; width: 180px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Forecast{width: 50%;background-image: url(../Image\ Of\ Excel/InsertImage/Forecast.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #GroupOutline{
+    background-image: url(../Image\ Of\ Excel/InsertImage/Group2.png),url(../Image\ Of\ Excel/arrowdown.png);
+    background-position: 50% 2%, 50% 98%;
+    background-size: 27px, 8px; 
+    position: relative;
+}
+#GroupOutlineMenu{z-index: 20; top: 70px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #Ungroup{
+    background-image: url(../Image\ Of\ Excel/InsertImage/Ungroup.png),url(../Image\ Of\ Excel/arrowdown.png);
+    background-position: 50% 2%, 50% 98%;
+    background-size: 27px, 8px; 
+    position: relative;
+}
+#UngroupMenu{z-index: 20; top: 70px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Subtotal{background-image: url(../Image\ Of\ Excel/InsertImage/Subtotal.png)}
+#ReviewItems.subMenu  > .ExcelTabItems > .PartOfTabItems:nth-child(1){width: 100px;}
+#ReviewItems.subMenu  > .ExcelTabItems > .PartOfTabItems:nth-child(2){width: 50px;}
+#ReviewItems.subMenu  > .ExcelTabItems > .PartOfTabItems:nth-child(3){width: 60px;}
+#ReviewItems.subMenu  > .ExcelTabItems > .PartOfTabItems:nth-child(4){width: 350px;}
+#ReviewItems.subMenu  > .ExcelTabItems > .PartOfTabItems:nth-child(5){width: 350px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Spell{width: 50%;background-image: url(../Image\ Of\ Excel/InsertImage/Spell.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Thesaurus{width: 50%;background-image: url(../Image\ Of\ Excel/InsertImage/Thesaurus.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .SmartLockup{width: 90%;background-image: url(../Image\ Of\ Excel/InsertImage/SmartLockup.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Translate{width: 90%;background-image: url(../Image\ Of\ Excel/InsertImage/Translate.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .NewCom{width: 15%;background-image: url(../Image\ Of\ Excel/InsertImage/NewCom.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .DeleteCom{width: 15%;background-image: url(../Image\ Of\ Excel/InsertImage/DeleteCom.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .PreviousCom{width: 15%;background-image: url(../Image\ Of\ Excel/InsertImage/PreviousCom.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .NextCom{width: 15%;background-image: url(../Image\ Of\ Excel/InsertImage/NextCom.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ShowCom{width: 40%; padding: 0; height: 80%;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ShowCom > .ShowCom-HideCom{background-image: url(../Image\ Of\ Excel/InsertImage/Show-Hide.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ShowCom > .ShowAll{background-image: url(../Image\ Of\ Excel/InsertImage/ShowAll.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ShowCom > .ShowInk{background-image: url(../Image\ Of\ Excel/InsertImage/ShowInk.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ProtectSheet{width: 15%;background-image: url(../Image\ Of\ Excel/InsertImage/ProtectSheet.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ProtectWorkbook{width: 15%;background-image: url(../Image\ Of\ Excel/InsertImage/ProtectWorkbook.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ShareWorkbook{width: 15%;background-image: url(../Image\ Of\ Excel/InsertImage/ShareWorkbook.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Change{width: 55%; padding: 0; height: 80%;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Change > .Protect-Share{background-image: url(../Image\ Of\ Excel/InsertImage/Protect-Share.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Change > .AllowUser{background-image: url(../Image\ Of\ Excel/InsertImage/AllowUser.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Change > #Track{background-image: url(../Image\ Of\ Excel/InsertImage/Track.png);}
+#Track{position: relative;}
+#TrackMenu{width: 180px;}
+#Track > img{width: 8px; height: 8px;}
+#ViewItems.subMenu  > .ExcelTabItems > .PartOfTabItems:nth-child(1){width: 200px;}
+#ViewItems.subMenu  > .ExcelTabItems > .PartOfTabItems:nth-child(2){width: 200px;}
+#ViewItems.subMenu  > .ExcelTabItems > .PartOfTabItems:nth-child(3){width: 150px;}
+#ViewItems.subMenu  > .ExcelTabItems > .PartOfTabItems:nth-child(4){width: 500px;}
+#ViewItems.subMenu  > .ExcelTabItems > .PartOfTabItems:nth-child(5){width: 50px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ViewNormal{background-image: url(../Image\ Of\ Excel/InsertImage/ViewNormal.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ViewBreak{background-image: url(../Image\ Of\ Excel/InsertImage/ViewBreak.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ViewLayout{background-image: url(../Image\ Of\ Excel/InsertImage/ViewLayout.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ViewCustom{background-image: url(../Image\ Of\ Excel/InsertImage/ViewCustom.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Zoom{background-image: url(../Image\ Of\ Excel/InsertImage/Zoom.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Page100{background-image: url(../Image\ Of\ Excel/InsertImage/Page100.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ZoomtoSelection{background-image: url(../Image\ Of\ Excel/InsertImage/ZoomtoSelection.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .ShowSheet{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    column-gap: 10px;
+    color: #555;
+}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .ShowSheet > input{margin: 0; border: 1px solid #555;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .ShowSheet > label{
+    width: 70px; 
+    height: 25px; 
+    line-height: 10px;
+    margin-top: 15px;
+}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .NewWindow{width: 10%;background-image: url(../Image\ Of\ Excel/InsertImage/NewWindow.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .Arrange{width: 10%;background-image: url(../Image\ Of\ Excel/InsertImage/Arrange.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #Freeze{
+    width: 10%;
+    background-image: url(../Image\ Of\ Excel/InsertImage/Freeze.png),url(../Image\ Of\ Excel/arrowdown.png);
+    background-position: 50% 2%, 50% 98%;
+    background-size: 27px, 8px; 
+    position: relative;
+    line-height: 11px;
+}
+#FreezeMenu{top: 70px; z-index: 20; width: 200px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #Freeze > #FreezeMenu > li{
+    text-indent: 50px; 
+    height: 50px;
+    line-height: 50px;
+}
+#FreezeMenu > li:nth-child(1){background-image: url(../Image\ Of\ Excel/InsertImage/Freeze.png); background-size: 27px;}
+#FreezeMenu > li:nth-child(2){background-image: url(../Image\ Of\ Excel/InsertImage/Freeze2.png); background-size: 27px;}
+#FreezeMenu > li:nth-child(3){background-image: url(../Image\ Of\ Excel/InsertImage/Freeze3.png); background-size: 27px;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .WindowType{border-right: 1px solid #ccc; width: 20%; height: 80%; padding: 0;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .WindowType > .Split{background-image: url(../Image\ Of\ Excel/InsertImage/Split.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .WindowType > .WindowHide{background-image: url(../Image\ Of\ Excel/InsertImage/WindowHide.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .WindowType > .Unhide{background-image: url(../Image\ Of\ Excel/InsertImage/Unhide.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ViewWindow{width: 40%; height: 80%; padding: 0;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ViewWindow > .ViewSide{background-image: url(../Image\ Of\ Excel/InsertImage/ViewSide.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ViewWindow > .Synchronous{background-image: url(../Image\ Of\ Excel/InsertImage/Synchronous.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > .ViewWindow > .ResetWindow{background-image: url(../Image\ Of\ Excel/InsertImage/ResetWindow.png);}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #Switch{
+    width: 10%;
+    background-image: url(../Image\ Of\ Excel/InsertImage/Switch.png),url(../Image\ Of\ Excel/arrowdown.png);
+    background-position: 50% 2%, 50% 98%;
+    background-size: 27px, 8px; 
+    position: relative;
+    line-height: 11px;
+}
+#SwitchMenu{z-index: 20; top: 70px; width: 80px; line-height: 20px; text-indent: 0;}
+#workBook > .header > .menu > li > .subMenu > .ExcelTabItems > .PartOfTabItems > .Items > #Macros{
+    width: 90%;
+    background-image: url(../Image\ Of\ Excel/InsertImage/Macros.png),url(../Image\ Of\ Excel/arrowdown.png);
+    background-position: 50% 2%, 50% 98%;
+    background-size: 27px, 8px; 
+    position: relative;
+}
+#MacrosMenu{z-index: 20; top: 70px; width: 180px;}
+/* Sheet */
+#workBook > .content{
+    width: 100%;
+    height: 590px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: start;
+    flex-flow: row wrap;
+    background-color: #e5e5e5;
+}
+#workBook > .content > .bar{
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    height: 30px;
+    margin: 10px 0 10px;
+}
+#workBook > .content > .bar > .boxName{
+    width: 150px;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+#workBook > .content > .bar > .insertFunction{
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 2px;  
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+#InsertFunction > div{
+    width: 30%;
+    height: 100%;
+    background-position: 50%;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+#InsertFunction > div:nth-child(1){background-image: url(../Zarbdar.png);}
+#InsertFunction > div:nth-child(2){background-image: url(../Tik.png);}
+#InsertFunction > div:nth-child(3){background-image: url(../FurmolaSheet.png);}
+#InsertFunction > div:nth-child(1):hover{background-image: url(../Image\ Of\ Excel/InsertImage/zarbdar2.png);}
+#InsertFunction > div:nth-child(2):hover{background-image: url(../Image\ Of\ Excel/InsertImage/Tik2.png);}
+#InsertFunction > div:nth-child(3):hover{background-image: url(../Image\ Of\ Excel/InsertImage/FurmolaSheet2.png);}
+#workBook > .content > .bar > input{
+    width: calc(100% - 300px);
+    border: 1px solid #ccc;
+    outline: none;
+    margin-right: 5px;
+}
+#workBook > .content > #word{
+    width: 100%;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    flex-flow: row wrap;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+#SelectAllSelol{
+    background-image: url(../number.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#workBook > .content > #word > li:nth-child(1){width: 30px; height: 100%; padding: 0;}
+#workBook > .content > #word > li:nth-child(1) > img{width: 100%; height: 100%;}
+#workBook > .content > #word > li:nth-child(15){margin-right: 27px;}
+#workBook > .content > #word > li{
+    border: 1px solid #ccc;
+    width: 6.565%;
+    height: 25px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    font-size: 16px;
+    padding: 1px 1.5px;
+}
+#Stage{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    overflow: hidden;
+}
+#Stage > #NumberOfSelol{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#Stage > #NumberOfSelol > li{
+    width: 30px;
+    height: 27.9px;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+#Stage > #Selol{
+    width: 97%;
+    height: 100%;
+    font-size: 12px;
+    font-family: tahoma;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+@font-face {
+    font-family: Mitra;
+    src: url(../Font/Mitra.ttf);
+}
+@font-face {
+    font-family: Iransans;
+    src: url(../Font/IranSans.ttf);
+}
+@font-face {
+    font-family: Kokab;
+    src: url(../Font/Kokab.ttf);
+}
+#Stage > #Selol > input{
+    border: inherit;
+    width: 6.72%;
+    height: 25px;
+    cursor: crosshair;
+    outline: none;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+    text-align: inherit;
+    background-color: inherit;
+}
+#workBook > .content > #FooterTop{
+    height: 25px;
+    width: 100%;
+    background-color: #e5e5e5;
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    display: flex;
+}
+#NewSheet{
+    width: 90px;
+    height: 90%;
+    margin-left: 110px;
+    background-color: #fff;
+    border-bottom: 4px solid #30714D;
+    color: #30714D;
+    text-align: center;
+}
+#Mosbat{
+    width: 30px;
+    height: 100%;
+    margin-left: 15px;
+    background-image: url(../+.png);
+    background-size: 18px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+#workBook > .content > #FooterBottom{
+    height: 40px;
+    width: 100%;
+    background-color: #f0f0f0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1315px;
+}
+#FooterBottom > h6{font-weight: normal; color: #555; margin-left: 5px; cursor: default;}
+#FooterBottom > .range{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#FooterBottom > .range > #BoxValue{
+    display: block; 
+    width: 40px; 
+    height: 40px;
+    margin-right: 5px;
+    text-align: center; 
+    font-size: 14px;
+    line-height: 40px;
+    background-color: #f0f0f0;
+    box-shadow: 2px 2px 10px #000,
+    2px 2px 10px red inset;
+    transform: rotate(45deg);
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    margin-bottom: 25px;
+}
+#FooterBottom > .range > #BoxValue > #rangeValue{
+    transform: rotate(-45deg);
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#FooterBottom > .range > input{
+    height: 3px; 
+    border-radius: 50%;
+    width: 80%; 
+    outline: none;
+    border: none; 
+    cursor: pointer;
+}
+#FooterBottom > .range > input::-moz-range-progress{
+    height: 7px;
+    background-color: rgb(161, 34, 53);
+    border: 1px solid #fff;
+    border-radius: 50px;
+}
+#FooterBottom > .range > input::-moz-range-thumb{
+    height: 20px;
+    width: 10px;
+    background-color: #555;
+}
+#RightClick{
+    width: 300px;
+    height: 60px;
+    background-color: rgb(240, 240, 240);
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    flex-flow: row wrap;
+    border: 1px solid #ccc;
+    font-weight: 100;
+    font-size: 14px;
+    color: #555;
+    gap: 3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: none;
+}
+#TextType:hover, #NumberOfText:hover{border: 1px solid #555;}
+#TextType{margin-left: 3px;}
+#TextType, #NumberOfText{
+    width: 80px;
+    height: 25px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    background-image: url(../Image\ Of\ Excel/arrowdown.png);
+    background-position: 95% 50%;
+    background-size: 8px;
+    background-repeat: no-repeat; 
+    cursor: pointer;
+    position: relative;
+}
+#TextType > span, #NumberOfText > span{width: 100%; height: 100%; display: block; text-indent: 10px;}
+#TextTypeMenu.Acardeon, #TextSizeMenu.Acardeon{width: 100%; top: 25px; z-index: 30;}
+#TextTypeMenu.Acardeon > li, #TextSizeMenu.Acardeon > li{text-indent: 10px;}
+#NumberOfText{width: 50px;}
+#IncreaseFontSize:hover, #DecreaseFontSize:hover{border: 1px solid #555; cursor: pointer;}
+#IncreaseFontSize, #DecreaseFontSize{
+    width: 25px; 
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 15px;
+    border: 1px solid transparent;
+}
+#IncreaseFontSize{background-image: url(../Image\ Of\ Excel/bigFont.png); background-size: 17px;}
+#DecreaseFontSize{background-image: url(../Image\ Of\ Excel/smallFont.png);}
+#CurrencyType:hover{border: 1px solid #555; cursor: pointer;}
+#CurrencyType{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 1px solid transparent;
+    background-image: url(../Image\ Of\ Excel/Currency.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 23px;
+    z-index: 30;
+}
+#CurrencyTypeMenu{width: 215px;}
+#TypeDarsad:hover, #TypeVirgol:hover, #TypeMerge:hover{border: 1px solid #555; cursor: pointer;}
+#TypeDarsad, #TypeVirgol, #TypeMerge{
+    width: 25px;
+    height: 25px;
+    border: 1px solid transparent;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+#TypeDarsad{background-image: url(../Image\ Of\ Excel/Darsad.png); background-size: 12px; width: 20px;}
+#TypeVirgol{background-image: url(../Image\ Of\ Excel/Virgol.png); background-size: 5px; width: 12px;}
+#TypeMerge{background-image: url(../Image\ Of\ Excel/Merge.png);}
+#FontBold:hover, #FontUnderLine:hover, #FontCenter:hover{border: 1px solid #555; cursor: pointer;}
+#FontBold, #FontUnderLine, #FontCenter{
+    width: 25px;
+    height: 25px;
+    border: 1px solid transparent;
+}
+#FontBold, #FontUnderLine, #FontCenter{
+    display: block;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+#FontBold{margin-left: 3px;}
+#FontBold{background-image: url(../Image\ Of\ Excel/B.png);}
+#FontUnderLine{background-image: url(../Image\ Of\ Excel/U.png); background-size: 9px;}
+#FontCenter{background-image: url(../Image\ Of\ Excel/YAlignCenter.png);}
+#BgFontColor:hover, #ColorFont:hover{border: 1px solid #555; cursor: pointer;}
+#BgFontColor, #ColorFont{
+    width: 25px;
+    height: 25px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 28px;
+    border: 1px solid transparent;
+    position: relative;
+}
+#BgFontColor{background-image: url(../Image\ Of\ Excel/Backgroundcolor.png);}
+#ColorFont{background-image: url(../Image\ Of\ Excel/textColor.png);}
+#BgFontColorMenu, #ColorFontMenu{
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    top: 25px;
+    z-index: 30;
+}
+#BgFontColorMenu > li, #ColorFontMenu > li{width: 15px; height: 15px; margin: 5px 0; border: 1px solid #ccc;}
+#BgFontColorMenu > li:nth-child(1){background-color: red;}
+#BgFontColorMenu > li:nth-child(2){background-color: #fff;}
+#BgFontColorMenu > li:nth-child(3){background-color: green;}
+#BgFontColorMenu > li:nth-child(4){background-color: purple;}
+#ColorFontMenu > li:nth-child(1){background-color: red;}
+#ColorFontMenu > li:nth-child(2){background-color: #000;}
+#ColorFontMenu > li:nth-child(3){background-color: green;}
+#ColorFontMenu > li:nth-child(4){background-color: purple;}
+#FontBorder:hover{border: 1px solid #555; cursor: pointer;}
+#FontBorder{
+    width: 25px;
+    height: 25px;
+    border: 1px solid transparent;
+    background-image: url(../Image\ Of\ Excel/border.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    position: relative;
+}
+#FontBorderMenu{top: 25px; height: 0;}
+#IncreaseDecimal:hover, #DecreaseDecimal:hover, #FormatText:hover{border: 1px solid #555; cursor: pointer;}
+#IncreaseDecimal, #DecreaseDecimal, #FormatText{
+    width: 25px;
+    height: 25px;
+    border: 1px solid transparent;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 12px;
+}
+#IncreaseDecimal{background-image: url(../Image\ Of\ Excel/Increase02.png);}
+#DecreaseDecimal{background-image: url(../Image\ Of\ Excel/Decrease02.png);}
+#FormatText{background-image: url(../Image\ Of\ Excel/FormatText.png); background-size: 17px;}
+.InputID{
+    background-image: url(../Image\ Of\ Excel/InsertImage/BackgroundSelol.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+}
